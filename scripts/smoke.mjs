@@ -1,0 +1,35 @@
+import { chromium } from '@playwright/test';
+import fs from 'node:fs';
+const browser=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
+const page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+const deck=JSON.parse(fs.readFileSync(new URL('../src/deck.json',import.meta.url)));
+try{
+ await page.goto('http://127.0.0.1:5173');
+ await page.getByRole('button',{name:'Понять Люми →'}).click();
+ const word=await page.locator('.flash strong').innerText();
+ await page.getByRole('button',{name:'Показать перевод'}).click();
+ await page.getByRole('button',{name:'Помочь Люми →'}).click();
+ const card=deck.find(c=>c.de===word);
+ const wrong=page.locator('.option').filter({hasText:new RegExp('^(?!'+card.ru+'$).+')}).first();
+ await wrong.click();
+ if(!await page.getByRole('status').isVisible())throw Error('Missing wrong-answer feedback');
+ await page.getByRole('button',{name:card.ru,exact:true}).click();
+ await page.getByRole('heading',{name:'Маленькое лунное «мур»'}).waitFor();
+ await page.getByRole('button',{name:'Отдохнуть'}).click();
+ await page.reload();
+ if(!await page.locator('.stats').innerText().then(t=>t.includes('♡ 1')))throw Error('Progress lost');
+ await page.getByRole('button',{name:'Из букв',exact:true}).click();
+ await page.getByRole('button',{name:'Понять Люми →'}).click();
+ const letters=await page.locator('.flash strong').innerText();
+ await page.getByRole('button',{name:'Показать перевод'}).click();
+ await page.getByRole('button',{name:'Помочь Люми →'}).click();
+ for(const letter of letters)await page.locator('.letters button:not(:disabled)').filter({hasText:new RegExp('^'+letter+'$')}).first().click();
+ await page.getByRole('button',{name:'Проверить',exact:true}).click();
+ await page.getByRole('heading',{name:'Маленькое лунное «мур»'}).waitFor();
+ await page.getByRole('button',{name:'Отдохнуть'}).click();
+ if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Mobile overflow');
+ await page.screenshot({path:'/workspace/pokitalk-demo.png',fullPage:true});
+ if(errors.length)throw Error(errors.join('\n'));
+ console.log('PASS: choice, wrong answer, care reward, persistence, letter assembly, mobile layout, no JS errors');
+}finally{await browser.close();}

@@ -1,0 +1,86 @@
+[
+  {
+    "de": "Wasser",
+    "ru": "вода",
+    "need": "drink",
+    "source_en": "water",
+    "source_de": "Wasser"
+  },
+  {
+    "de": "Milch",
+    "ru": "молоко",
+    "need": "drink",
+    "source_en": "milk",
+    "source_de": "Milch"
+  },
+  {
+    "de": "Fisch",
+    "ru": "рыба",
+    "need": "food",
+    "source_en": "fish",
+    "source_de": "Fisch"
+  },
+  {
+    "de": "Brot",
+    "ru": "хлеб",
+    "need": "food",
+    "source_en": "bread",
+    "source_de": "Brot,Backware"
+  },
+  {
+    "de": "Apfel",
+    "ru": "яблоко",
+    "need": "food",
+    "source_en": "apple",
+    "source_de": "Apfel,Frucht"
+  },
+  {
+    "de": "Bett",
+    "ru": "кровать",
+    "need": "rest",
+    "source_en": "bed",
+    "source_de": "Bett,Liege"
+  },
+  {
+    "de": "schlafen",
+    "ru": "спать",
+    "need": "rest",
+    "source_en": "sleep",
+    "source_de": "schlafen"
+  },
+  {
+    "de": "ruhen",
+    "ru": "отдыхать",
+    "need": "rest",
+    "source_en": "rest",
+    "source_de": "ruhen"
+  },
+  {
+    "de": "spielen",
+    "ru": "играть",
+    "need": "play",
+    "source_en": "play",
+    "source_de": "spielen"
+  },
+  {
+    "de": "Ball",
+    "ru": "мяч",
+    "need": "play",
+    "source_en": "ball",
+    "source_de": "Ball,Kugel"
+  },
+  {
+    "de": "essen",
+    "ru": "есть",
+    "need": "food",
+    "source_en": "eat",
+    "source_de": "essen"
+  },
+  {
+    "de": "trinken",
+    "ru": "пить",
+    "need": "drink",
+    "source_en": "drink",
+    "source_de": "trinken"
+  }
+]
