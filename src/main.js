@@ -1,23 +1,99 @@
 import './style.css';
-import starterDeck from './deck.json';
-import { categories, parseDeck, shuffle, sameWord, reward } from './game.js';
+import deck from './deck.json';
+import words from './moods.json';
+import { catSVG } from './cat.js';
+import { categories, SAVE_KEY, newGame, restoreGame, advanceTime, pickRequest, moodFor, answerMode, applyCare, ignoreRequest, petCat, sameWord, shuffle } from './game.js';
 const root=document.querySelector('#app');
-let state={deck:starterDeck,bond:0,energy:60,learned:[],mode:'choice',screen:'home'};
-try { const saved=JSON.parse(localStorage.getItem('mooncat')||'null'); if(saved) state={...state,...saved,deck:parseDeck(JSON.stringify(saved.deck)),screen:'home'}; } catch {}
-let current=null, letters=[], answer=[], notice='', revealed=false;
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function save(){try{localStorage.setItem('mooncat',JSON.stringify(state));}catch{notice='Хранилище недоступно: прогресс сохранится только до закрытия.';}}
-function cat(){return `<div class="orbit"><span class="star s1">✦</span><span class="star s2">✧</span><div class="cat"><div class="ear left"></div><div class="ear right"></div><div class="face"><div class="moon">☾</div><div class="eyes">● <span>●</span></div><div class="nose">·</div><div class="mouth">ω</div><div class="blush b1"></div><div class="blush b2"></div></div><div class="paws">∩　∩</div></div><div class="planet"></div></div>`;}
-function render(){root.innerHTML=`<main><header><a href="#" id="home" aria-label="На главную">☾ <b>POKITALK</b></a><span class="tag">RU → DE</span></header><section class="heading"><p class="eyebrow">МАЛЕНЬКАЯ ИСТОРИЯ • БОЛЬШАЯ ДРУЖБА</p><h1>На одной луне</h1><p>Учись понимать того, кто тебе дорог.</p></section><div class="layout"><section class="scene"><div class="scene-top"><span>☽ Тихая сторона Луны</span><span>День ${1+Math.floor(state.bond/5)}</span></div>${cat()}<div class="dialog"><span class="speaker">ЛЮМИ <small>лунный кот</small></span><h2>${current?(state.screen==='question' && state.mode==='letters'?'… ?':esc(current.de)):'… ?'}</h2><p>${current?'Люми смотрит на тебя и ждёт. Что означает его просьба?':'В капсуле ты находишь маленького кота. Он говорит по-немецки. Кажется, вам предстоит научиться понимать друг друга.'}</p></div></section><section class="panel"><div class="stats"><div><span>Доверие</span><strong>♡ ${state.bond}</strong></div><div><span>Слова</span><strong>${state.learned.length} / ${state.deck.length}</strong></div></div><div class="energy"><span>Самочувствие</span><span>${state.energy}%</span><progress max="100" value="${state.energy}"></progress></div>${content()}${notice?`<p class="notice" role="status">${esc(notice)}</p>`:''}</section></div><footer>12 слов из Oxford 3000 · Без спешки. По одному слову ближе.</footer></main>`;bind();}
-function content(){
- if(state.screen==='import')return `<p class="eyebrow">ТВОЙ СЛОВАРЬ</p><h2>Слова для вашей истории</h2><p>Импортируй проверенные слова из указанного списка Lingualeo. В демо уже есть 12 слов из вашей колоды Oxford 3000. Замена словаря начинает историю заново.</p><label for="deck">JSON: массив карточек с полями <code>de</code> (немецкое слово), <code>ru</code> (перевод), <code>need</code> (food, drink, rest, play).</label><textarea id="deck" rows="7" placeholder="Вставь JSON со словами из разрешённого списка"></textarea><label class="confirm"><input type="checkbox" id="verified"> Я проверил(а), что все слова входят в разрешённый список.</label><button id="import">Загрузить словарь</button><button class="secondary" id="back">Назад</button>`;
- if(state.screen==='lesson' && current)return `<p class="eyebrow">${esc(categories[current.need])} • КАРТОЧКА</p><h2>Сначала познакомимся</h2><div class="flash"><strong>${esc(current.de)}</strong><span>${revealed?esc(current.ru):'Вспомни или открой перевод'}</span></div><button id="reveal">${revealed?'Помочь Люми →':'Показать перевод'}</button><button class="secondary" id="back">Вернуться домой</button>`;
- if(state.screen==='question' && current){return `<p class="eyebrow">${state.mode==='choice'?'ВЫБЕРИ ЗНАЧЕНИЕ':'СОБЕРИ НЕМЕЦКОЕ СЛОВО'}</p><h2>${state.mode==='choice'?'Что просит Люми?':esc(current.ru)}</h2>${state.mode==='choice'?`<div class="choices">${state.options.map((c,i)=>`<button class="secondary option" data-index="${i}">${esc(c.ru)}</button>`).join('')}</div>`:`<div class="answer" aria-live="polite">${esc(answer.map(i=>letters[i]).join(''))||'Твоё слово…'}</div><div class="letters">${letters.map((c,i)=>`<button data-letter="${i}" ${answer.includes(i)?'disabled':''}>${esc(c===' '?'␣':c)}</button>`).join('')}</div><div class="actions"><button class="secondary" id="undo">↶ Убрать</button><button id="check">Проверить</button></div>`}<button class="text" id="hint">Посмотреть карточку</button>`;}
- if(state.screen==='success')return `<p class="eyebrow">ВЫ ПОНЯЛИ ДРУГ ДРУГА</p><h2>Маленькое лунное «мур»</h2><p>Ты позаботился о Люми. Он прижимается к твоей ладони. Теперь это слово — часть вашей истории.</p><div class="flash"><strong>${esc(current.de)}</strong><span>${esc(current.ru)}</span></div><button id="next">Следующая просьба →</button><button class="secondary" id="back">Отдохнуть</button>`;
- return `<p class="eyebrow">ГЛАВА 01 · ПЕРВАЯ ВСТРЕЧА</p><h2>Привет, маленький спутник</h2><p>Карточка поможет понять просьбу. Затем выбери значение или собери немецкое слово из букв, чтобы позаботиться о коте.</p><div class="mode"><button class="${state.mode==='choice'?'selected':'secondary'}" data-mode="choice">Выбор слов</button><button class="${state.mode==='letters'?'selected':'secondary'}" data-mode="letters">Из букв</button></div><button id="start">${state.deck.length?'Понять Люми →':'Добавить словарь →'}</button><button class="text" id="settings">${state.deck.length?'Заменить словарь':'Как добавить слова'}</button><p class="fine">Прогресс сохраняется на этом устройстве. Ошибки не вредят коту.</p>`;
+const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const iconPaths={food:'M3 12c4-8 11-8 15 0-4 8-11 8-15 0Zm15 0 4-5v10l-4-5ZM8 11h.01',drink:'M12 2C9 7 5 11 5 15a7 7 0 0 0 14 0c0-4-4-8-7-13Z',rest:'M20 15A9 9 0 0 1 9 3a9 9 0 1 0 11 12Z',play:'m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7Z',heart:'M20 5c-3-3-7-1-8 2-1-3-5-5-8-2-5 5 3 11 8 15 5-4 13-10 8-15Z',book:'M12 5C8 2 3 4 3 4v15s5-2 9 1c4-3 9-1 9-1V4s-5-2-9 1Zm0 0v15',settings:'M4 7h16M4 17h16M8 4v6M16 14v6',close:'m6 6 12 12M6 18 18 6',back:'m14 5-7 7 7 7',arrow:'M5 12h14m-6-6 6 6-6 6'};
+const icon=(name)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${iconPaths[name]||iconPaths.play}"/></svg>`;
+function read(key){try{return JSON.parse(localStorage.getItem(key)||'null');}catch{return null;}}
+let state=restoreGame(read(SAVE_KEY),read('mooncat'),deck);
+let onboarding=state.introduced?null:'language', sheet=null, reaction='', response=null, story=state.lastStory, notice='', letters=[], answer=[];
+let request=deck.find(c=>c.de===state.request)||pickRequest(state,deck);
+state.request=request.de;
+let storageError=false;
+function save(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(state));storageError=false;}catch{storageError=true;}}
+function makeLetters(){letters=shuffle(Array.from(request.de));answer=[];}
+makeLetters();save();
+function mood(){return moodFor(state,reaction);}
+const moodTitle={happy:'Тянется к тебе',hungry:'Тихонько просит',thirsty:'Ищет твоего взгляда',sleepy:'Глазки слипаются',bored:'Хочет внимания',sad:'Держится в стороне',angry:'Отворачивается'};
+function bubble(){
+ if(response)return response;
+ const feeling=words[mood()]||words.happy;
+ return {top:feeling.de+'…',bottom:answerMode(state)==='letters'?'… ?':request.de+'?',note:'Коснись пузыря, чтобы ответить'};
 }
-function next(){current=state.deck[Math.floor(Math.random()*state.deck.length)];state.options=shuffle([current,...shuffle(state.deck.filter(c=>c.de!==current.de && c.ru!==current.ru)).slice(0,3)]);letters=shuffle(Array.from(current.de));answer=[];revealed=false;notice='';state.screen='lesson';save();render();}
-function check(ok){notice=ok?'Доверие +1 · Самочувствие +8':'Пока не совсем. Попробуй ещё раз или открой карточку.';if(ok){state=reward(state,current);state.screen='success';save();}render();}
-function bind(){const on=(id,fn)=>document.getElementById(id)?.addEventListener('click',fn);on('home',e=>{e.preventDefault();home();});on('back',home);on('start',()=>{if(state.deck.length)next();else{state.screen='import';render();}});on('settings',()=>{state.screen='import';notice='';render();});on('reveal',()=>{if(revealed)state.screen='question';else revealed=true;notice='';render();});on('hint',()=>{state.screen='lesson';revealed=false;notice='';render();});on('next',next);on('undo',()=>{answer.pop();render();});on('check',()=>check(sameWord(answer.map(i=>letters[i]).join(''),current.de)));document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{state.mode=b.dataset.mode;save();render();});document.querySelectorAll('[data-index]').forEach(b=>b.onclick=()=>check(state.options[+b.dataset.index].de===current.de));document.querySelectorAll('[data-letter]').forEach(b=>b.onclick=()=>{answer.push(+b.dataset.letter);render();});on('import',()=>{const input=document.getElementById('deck');try{if(!document.getElementById('verified').checked)throw new Error('Подтверди источник слов.');const deck=parseDeck(input.value);state={...state,deck,learned:[],bond:0,energy:60,screen:'home'};current=null;notice='Словарь загружен. Новая история начинается!';save();render();}catch(e){notice=e.message;const value=input.value;render();document.getElementById('deck').value=value;}});}
-function home(){state.screen='home';current=null;notice='';save();render();}
+function meters(){return Object.entries(categories).map(([key,label])=>`<div class="meter ${state.needs[key]<40?'low':''}" data-need="${key}" role="meter" aria-label="${label}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${state.needs[key]}"><span class="meter-symbol">${icon(key)}</span><span class="meter-track"><span style="width:${state.needs[key]}%"></span></span><span class="meter-value">${state.needs[key]}</span></div>`).join('');}
+function render(){
+ const focus=document.activeElement?.dataset.focus;
+ const b=bubble();
+ root.innerHTML=`<main class="game mood-${mood()}" aria-label="Комната Люми"><div class="sky" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><div class="far-moon"></div></div><header class="hud"><div class="name"><span class="tiny-moon">☾</span><div><h1>Люми</h1><span>${escape(moodTitle[mood()])}</span></div></div><button class="bond" data-action="journal" aria-label="Доверие: ${state.bond} из 100">${icon('heart')}<span data-testid="bond">${state.bond}</span></button><button class="icon-button" data-action="settings" aria-label="Настройки">${icon('settings')}</button></header><section class="needs" aria-label="Состояние кота">${meters()}</section><section class="stage" aria-label="Лунный кот"><button class="bubble ${response?'reaction':''}" data-action="reply" aria-label="Ответить Люми"><span class="bubble-feeling">${escape(b.top)}</span><strong>${escape(b.bottom)}</strong><small>${escape(b.note)}</small></button><div class="floor" aria-hidden="true"></div><button class="cat-touch" data-action="pet" aria-label="Погладить Люми">${catSVG(mood())}</button><span class="touch-hint">${reaction?'':'Можно просто побыть рядом'}</span></section><div class="story-line" role="status">${escape(storageError?'Не удалось сохранить прогресс на устройстве.':notice||story||'Он смотрит на тебя. Кажется, ему что-то нужно.')}</div><div class="main-actions"><button class="answer-button" data-action="reply">${response?'Слушать дальше':'Ответить Люми'}${icon('arrow')}</button><button class="book-button" data-action="book" aria-label="Открыть карточки">${icon('book')}</button></div><nav class="care-dock" aria-label="Уход за котом">${[['food','Покормить'],['drink','Напоить'],['rest','Уложить'],['play','Поиграть']].map(([key,label])=>`<button data-action="care" data-need="${key}">${icon(key)}<span>${label}</span></button>`).join('')}</nav>${onboarding?intro():''}${sheet?dialog():''}</main>`;
+ const modal=document.querySelector('dialog');if(modal){modal.showModal();modal.addEventListener('cancel',event=>{event.preventDefault();if(!onboarding){sheet=null;render();}});}
+ if(focus)document.querySelector(`[data-focus="${focus}"]`)?.focus();
+}
+function intro(){return `<dialog class="onboarding" aria-labelledby="intro-title"><div class="intro-moon">☾</div>${onboarding==='language'?`<p class="eyebrow">ПЕРЕД ПЕРВОЙ ВСТРЕЧЕЙ</p><h2 id="intro-title">Какой язык будем открывать?</h2><p>Язык интерфейса — русский. Этот выбор останется за пределами вашей истории.</p><button class="language selected" data-action="language"><span>Немецкий</span><span>Выбран ✓</span></button><p class="muted">В этой демоверсии доступен один язык.</p><button class="primary" data-action="meet">Найти своего спутника ${icon('arrow')}</button>`:`<p class="eyebrow">ГДЕ-ТО НА ТИХОЙ СТОРОНЕ ЛУНЫ</p><h2 id="intro-title">Кто-то ждёт тебя.</h2><p>В маленьком кратере свернулся кот. Он касается твоей ладони и шепчет незнакомые слова.</p><p>Ты пока не понимаешь его. Но видишь, когда он грустит, хочет есть или просто тянется к тебе.</p><p class="intro-whisper">Его зовут Люми. Остальное вы узнаете вместе.</p><button class="primary" data-action="begin">Остаться с Люми ${icon('heart')}</button>`}</dialog>`;}
+function dialog(){
+ let title='',body='';
+ if(sheet.type==='care'){
+  const labels={food:'Что ему предложить?',drink:'Чем его напоить?',rest:'Как ему помочь отдохнуть?',play:'Во что поиграем?'};
+  title=sheet.need?labels[sheet.need]:'Что ты хочешь, Люми?';
+  if(answerMode(state)==='letters' && (!sheet.need||sheet.need===request.need)){
+   body=`<p class="sheet-copy">Вспомни, как звучит «${escape(request.ru)}», и собери ответ.</p><div class="letter-answer" aria-live="polite">${escape(answer.map(i=>letters[i]).join(''))||'<span>Твоё слово…</span>'}</div><div class="letters">${letters.map((c,i)=>`<button data-action="letter" data-index="${i}" data-focus="letter-${i}" ${answer.includes(i)?'disabled':''}>${escape(c)}</button>`).join('')}</div><div class="letter-controls"><button class="quiet" data-action="undo">Убрать букву</button><button class="primary" data-action="check" ${answer.length?'':'disabled'}>Предложить</button></div>`;
+  }else{
+   const options=sheet.need?deck.filter(c=>c.need===sheet.need):sheet.options;
+   body=`<p class="sheet-copy">${response?'':`Люми шепчет: <b>${escape(request.de)}?</b>`} Выбери, что ему дать или сделать.</p><div class="gifts">${options.map(c=>`<button data-action="give" data-word="${escape(c.de)}"><span>${escape(c.ru[0].toUpperCase()+c.ru.slice(1))}</span><small>${state.learned.includes(c.de)?escape(c.de):'· · ·'}</small></button>`).join('')}</div>`;
+  }
+  body+=`<div class="sheet-links"><button data-action="book">${icon('book')} Подсмотреть карточку</button><button data-action="ignore">Не сейчас</button></div>`;
+ }else if(sheet.type==='book'){
+  title='Наш маленький словарь';
+  const feeling=words[mood()]||words.happy;
+  body=`<p class="sheet-copy">Подсказка бесплатна. Каждое понятое слово помогает позаботиться о Люми.</p><div class="flashcard"><span>ЕГО НАСТРОЕНИЕ</span><strong>${escape(feeling.de)}</strong><p>${escape(feeling.ru)}</p></div><div class="flashcard"><span>ЕГО ПРОСЬБА</span><strong>${escape(request.de)}</strong><p>${escape(request.ru)}</p></div><button class="primary" data-action="return-care">Попробовать ответить ${icon('arrow')}</button>`;
+ }else if(sheet.type==='journal'){
+  title='Вы становитесь ближе';
+  body=`<p class="sheet-copy">Доверие: ${state.bond} из 100. Понятых слов: ${state.learned.length} из ${deck.length}.</p><p>Внимательный уход сближает вас. Если не услышать просьбу, Люми может обидеться. Отношения можно восстановить.</p><div class="learned">${state.learned.length?state.learned.map(w=>`<span>${escape(w)}</span>`).join(''):'Первые общие слова ещё впереди.'}</div>`;
+ }else{
+  title='Как ты отвечаешь';
+  body=`<p class="sheet-copy">Кот остаётся рядом. Меняется только способ ответа.</p><div class="formats">${[['mixed','По-разному','Иногда слова, иногда буквы'],['choice','Выбирать слова','Предлагать готовые действия'],['letters','Собирать из букв','Вспоминать слово самому']].map(([value,label,sub])=>`<button class="${state.format===value?'selected':''}" data-action="format" data-format="${value}"><span>${label}</span><small>${sub}</small></button>`).join('')}</div><p class="muted">Прогресс сохраняется на этом устройстве. Во время отсутствия потребности снижаются немного, но доверие не теряется.</p>`;
+ }
+ return `<dialog class="sheet" aria-labelledby="sheet-title"><div class="sheet-grip" aria-hidden="true"></div><header><h2 id="sheet-title">${title}</h2><button class="icon-button" data-action="close" aria-label="Закрыть">${icon('close')}</button></header>${body}${notice?`<p class="sheet-notice" role="status">${escape(notice)}</p>`:''}</dialog>`;
+}
+function openCare(need=null){if(response)nextRequest();sheet={type:'care',need,options:shuffle([request,...shuffle(deck.filter(c=>c.need!==request.need)).slice(0,3)])};notice='';render();}
+function nextRequest(){reaction='';response=null;state=advanceTime(state);request=pickRequest(state,deck);state.request=request.de;makeLetters();notice='';save();}
+function finishCare(given){
+ const result=applyCare(state,request,given);state=result.state;
+ reaction=result.exact?'happy':result.useful?'happy':'angry';
+ story=result.exact?'Люми довольно щурится и прижимается к твоей руке.':result.useful?'Люми принимает заботу, хотя это не совсем то, о чём просил.':'Люми отворачивается. Кажется, сейчас ему нужно было другое.';
+ response={top:result.useful?words.thanks.de+'…':words.no.de+'…',bottom:result.useful?words.happy.de+'!':words.angry.de+'…',note:`Доверие ${result.delta>0?'+':''}${result.delta}`};
+ state.lastStory=story;sheet=null;notice='';save();render();
+}
+root.addEventListener('click',event=>{
+ const button=event.target.closest('button[data-action]');if(!button||button.disabled)return;
+ const action=button.dataset.action;
+ if(action==='language')return;
+ if(action==='meet'){onboarding='story';render();return;}
+ if(action==='begin'){state.introduced=true;onboarding=null;save();render();return;}
+ if(action==='close'){sheet=null;notice='';render();return;}
+ if(action==='reply'){if(response){nextRequest();render();}else openCare();return;}
+ if(action==='care'){openCare(button.dataset.need);return;}
+ if(action==='give'){finishCare(deck.find(c=>c.de===button.dataset.word));return;}
+ if(action==='letter'){answer.push(+button.dataset.index);notice='';render();return;}
+ if(action==='undo'){answer.pop();notice='';render();return;}
+ if(action==='check'){
+  if(sameWord(answer.map(i=>letters[i]).join(''),request.de))finishCare(request);
+  else{state={...state,bond:Math.max(0,state.bond-2)};reaction='sad';story='Люми не понял ответ и опустил ушки. Можно попробовать ещё раз.';state.lastStory=story;notice='Люми растерялся. Доверие −2. Открой карточку или попробуй ещё раз.';save();render();}return;
+ }
+ if(action==='ignore'){
+  state=ignoreRequest(state);reaction='sad';story='Люми тихо сворачивается клубком. Твоего внимания ему не хватило.';state.lastStory=story;response={top:words.sad.de+'…',bottom:'…',note:'Доверие −3'};sheet=null;notice='';save();render();return;
+ }
+ if(action==='pet'){
+  const result=petCat(state);state=result.state;
+  if(result.delta===0)notice='Люми ещё чувствует тепло твоей ладони.';
+  else{reaction=result.delta>0?'happy':'angry';story=result.delta>0?'Люми подставляет лоб под твою ладонь. Доверие +2.':'Люми сонно отводит лапой твою руку. Сейчас ему нужен покой. Доверие −2.';notice='';state.lastStory=story;}
+  save();render();return;
+ }
+ if(action==='return-care'){openCare();return;}
+ if(action==='format'){state.format=button.dataset.format;makeLetters();notice='';save();render();return;}
+ if(['book','settings','journal'].includes(action)){if(action==='book' && response)nextRequest();notice='';sheet={type:action};render();}
+});
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){state=advanceTime(state);save();render();}});
 render();

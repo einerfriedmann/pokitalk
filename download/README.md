@@ -1,6 +1,6 @@
 # 🌙 Лунный кот
 
-Демо игры для изучения немецкого языка.
+Версия 0.2.0 · Кот на весь экран, эмоции, просьбы в пузырях и уход, который меняет ваши отношения.
 
 ## [⬇ Скачать APK · 4 МБ](https://github.com/einerfriedmann/pokitalk/raw/refs/heads/main/download/pokitalk-demo.apk)
 

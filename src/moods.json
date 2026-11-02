@@ -1,0 +1,62 @@
+{
+  "hungry": {
+    "de": "hungrig",
+    "ru": "голодный",
+    "source_en": "hungry",
+    "source_de": "hungrig"
+  },
+  "thirsty": {
+    "de": "durstig",
+    "ru": "хочет пить",
+    "source_en": "thirsty",
+    "source_de": "durstig"
+  },
+  "sleepy": {
+    "de": "müde",
+    "ru": "уставший",
+    "source_en": "tired",
+    "source_de": "müde"
+  },
+  "sad": {
+    "de": "traurig",
+    "ru": "грустный",
+    "source_en": "sad",
+    "source_de": "traurig"
+  },
+  "happy": {
+    "de": "glücklich",
+    "ru": "счастливый",
+    "source_en": "happy",
+    "source_de": "glücklich"
+  },
+  "angry": {
+    "de": "verärgert",
+    "ru": "недовольный",
+    "source_en": "angry",
+    "source_de": "wütend,verärgert"
+  },
+  "bored": {
+    "de": "gelangweilt",
+    "ru": "скучающий",
+    "source_en": "bored",
+    "source_de": "gelangweilt,interesselos"
+  },
+  "thanks": {
+    "de": "Danke",
+    "ru": "спасибо",
+    "source_en": "thanks",
+    "source_de": "Danke"
+  },
+  "please": {
+    "de": "bitte",
+    "ru": "пожалуйста",
+    "source_en": "please",
+    "source_de": "bitte"
+  },
+  "no": {
+    "de": "nein",
+    "ru": "нет",
+    "source_en": "no",
+    "source_de": "nein"
+  }
+}
