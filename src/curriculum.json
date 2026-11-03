@@ -1,0 +1,2438 @@
+{
+  "topics": [
+    {
+      "id": "care",
+      "title": "Забота и еда",
+      "description": "Первое знакомство: просьбы Люми, еда, питьё и отдых.",
+      "trust": 0,
+      "words": [
+        {
+          "id": "care-water",
+          "de": "Wasser",
+          "ru": "вода",
+          "source_en": "water",
+          "source_de": "Wasser",
+          "article": "das",
+          "visual": "water",
+          "gameCategory": "food"
+        },
+        {
+          "id": "care-milk",
+          "de": "Milch",
+          "ru": "молоко",
+          "source_en": "milk",
+          "source_de": "Milch",
+          "article": "die",
+          "visual": "milk",
+          "gameCategory": "food"
+        },
+        {
+          "id": "care-fish",
+          "de": "Fisch",
+          "ru": "рыба",
+          "source_en": "fish",
+          "source_de": "Fisch",
+          "article": "der",
+          "visual": "fish",
+          "gameCategory": "food"
+        },
+        {
+          "id": "care-bread",
+          "de": "Brot",
+          "ru": "хлеб",
+          "source_en": "bread",
+          "source_de": "Brot,Backware",
+          "article": "das",
+          "visual": "bread",
+          "gameCategory": "food"
+        },
+        {
+          "id": "care-apple",
+          "de": "Apfel",
+          "ru": "яблоко",
+          "source_en": "apple",
+          "source_de": "Apfel,Frucht",
+          "article": "der",
+          "visual": "apple",
+          "gameCategory": "food"
+        },
+        {
+          "id": "care-bed",
+          "de": "Bett",
+          "ru": "кровать",
+          "source_en": "bed",
+          "source_de": "Bett,Liege",
+          "article": "das",
+          "visual": "bed"
+        },
+        {
+          "id": "care-sleep",
+          "de": "schlafen",
+          "ru": "спать",
+          "source_en": "sleep",
+          "source_de": "schlafen"
+        },
+        {
+          "id": "care-rest",
+          "de": "ruhen",
+          "ru": "отдыхать",
+          "source_en": "rest",
+          "source_de": "ruhen"
+        },
+        {
+          "id": "care-play",
+          "de": "spielen",
+          "ru": "играть",
+          "source_en": "play",
+          "source_de": "spielen"
+        },
+        {
+          "id": "care-ball",
+          "de": "Ball",
+          "ru": "мяч",
+          "source_en": "ball",
+          "source_de": "Ball,Kugel",
+          "article": "der",
+          "visual": "ball"
+        },
+        {
+          "id": "care-eat",
+          "de": "essen",
+          "ru": "есть, кушать",
+          "source_en": "eat",
+          "source_de": "essen"
+        },
+        {
+          "id": "care-drink",
+          "de": "trinken",
+          "ru": "пить",
+          "source_en": "drink",
+          "source_de": "trinken"
+        },
+        {
+          "id": "care-book",
+          "de": "Buch",
+          "ru": "книга",
+          "source_en": "book",
+          "source_de": "Buch,Werk",
+          "article": "das",
+          "visual": "book"
+        },
+        {
+          "id": "care-cup",
+          "de": "Tasse",
+          "ru": "чашка",
+          "source_en": "cup",
+          "source_de": "Tasse,Becher",
+          "article": "die",
+          "visual": "cup",
+          "gameCategory": "kitchen"
+        },
+        {
+          "id": "care-toy",
+          "de": "Spielzeug",
+          "ru": "игрушка",
+          "source_en": "toy",
+          "source_de": "Spielzeug",
+          "article": "das",
+          "visual": "toy"
+        },
+        {
+          "id": "care-soap",
+          "de": "Seife",
+          "ru": "мыло",
+          "source_en": "soap",
+          "source_de": "Seife",
+          "article": "die",
+          "visual": "soap"
+        },
+        {
+          "id": "care-towel",
+          "de": "Handtuch",
+          "ru": "полотенце",
+          "source_en": "towel",
+          "source_de": "Handtuch",
+          "article": "das",
+          "visual": "towel"
+        },
+        {
+          "id": "care-hungry",
+          "de": "hungrig",
+          "ru": "голодный",
+          "source_en": "hungry",
+          "source_de": "hungrig"
+        },
+        {
+          "id": "care-thirsty",
+          "de": "durstig",
+          "ru": "испытывающий жажду",
+          "source_en": "thirsty",
+          "source_de": "durstig"
+        },
+        {
+          "id": "care-tired",
+          "de": "müde",
+          "ru": "уставший, сонный",
+          "source_en": "tired",
+          "source_de": "müde"
+        },
+        {
+          "id": "care-breakfast",
+          "de": "Frühstück",
+          "ru": "завтрак",
+          "source_en": "breakfast",
+          "source_de": "Frühstück,Mahlzeit",
+          "article": "das"
+        },
+        {
+          "id": "care-tea",
+          "de": "Tee",
+          "ru": "чай",
+          "source_en": "tea",
+          "source_de": "Tee",
+          "article": "der",
+          "visual": "tea",
+          "gameCategory": "food"
+        },
+        {
+          "id": "care-coffee",
+          "de": "Kaffee",
+          "ru": "кофе",
+          "source_en": "coffee",
+          "source_de": "Kaffee, Getränk",
+          "article": "der",
+          "visual": "coffee",
+          "gameCategory": "food"
+        },
+        {
+          "id": "care-sugar",
+          "de": "Zucker",
+          "ru": "сахар",
+          "source_en": "sugar",
+          "source_de": "Zucker",
+          "article": "der"
+        },
+        {
+          "id": "care-salt",
+          "de": "Salz",
+          "ru": "соль",
+          "source_en": "salt",
+          "source_de": "Salz",
+          "article": "das"
+        },
+        {
+          "id": "care-fruit",
+          "de": "Frucht",
+          "ru": "плод, фрукт",
+          "source_en": "fruit",
+          "source_de": "Frucht",
+          "article": "die"
+        },
+        {
+          "id": "care-vegetable",
+          "de": "Gemüse",
+          "ru": "овощи",
+          "source_en": "vegetable",
+          "source_de": "Gemüse",
+          "article": "das"
+        },
+        {
+          "id": "care-egg",
+          "de": "Ei",
+          "ru": "яйцо",
+          "source_en": "egg",
+          "source_de": "Ei",
+          "article": "das",
+          "visual": "egg",
+          "gameCategory": "food"
+        },
+        {
+          "id": "care-cheese",
+          "de": "Käse",
+          "ru": "сыр",
+          "source_en": "cheese",
+          "source_de": "Käse, Milchprodukt",
+          "article": "der",
+          "visual": "cheese",
+          "gameCategory": "food"
+        },
+        {
+          "id": "care-meat",
+          "de": "Fleisch",
+          "ru": "мясо",
+          "source_en": "meat",
+          "source_de": "Fleisch",
+          "article": "das"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "Квартира и приборы",
+      "description": "Комнаты, мебель и полезные домашние приборы.",
+      "trust": 50,
+      "words": [
+        {
+          "id": "home-table",
+          "de": "Tisch",
+          "ru": "стол",
+          "source_en": "table",
+          "source_de": "Tisch",
+          "article": "der",
+          "visual": "table"
+        },
+        {
+          "id": "home-chair",
+          "de": "Stuhl",
+          "ru": "стул",
+          "source_en": "chair",
+          "source_de": "Stuhl, Sitzmöbel",
+          "article": "der",
+          "visual": "chair"
+        },
+        {
+          "id": "home-house",
+          "de": "Haus",
+          "ru": "дом, здание",
+          "source_en": "house",
+          "source_de": "Haus",
+          "article": "das",
+          "visual": "house"
+        },
+        {
+          "id": "home-home",
+          "de": "Zuhause",
+          "ru": "родной дом",
+          "source_en": "home",
+          "source_de": "Zuhause",
+          "article": "das"
+        },
+        {
+          "id": "home-room",
+          "de": "Raum",
+          "ru": "комната, помещение",
+          "source_en": "room",
+          "source_de": "Raum",
+          "article": "der"
+        },
+        {
+          "id": "home-door",
+          "de": "Tür",
+          "ru": "дверь",
+          "source_en": "door",
+          "source_de": "Tür",
+          "article": "die",
+          "visual": "door"
+        },
+        {
+          "id": "home-window",
+          "de": "Fenster",
+          "ru": "окно",
+          "source_en": "window",
+          "source_de": "Fenster",
+          "article": "das",
+          "visual": "window"
+        },
+        {
+          "id": "home-wall",
+          "de": "Wand",
+          "ru": "стена",
+          "source_en": "wall",
+          "source_de": "Wand",
+          "article": "die"
+        },
+        {
+          "id": "home-floor",
+          "de": "Boden",
+          "ru": "пол, поверхность",
+          "source_en": "floor",
+          "source_de": "Boden",
+          "article": "der"
+        },
+        {
+          "id": "home-roof",
+          "de": "Dach",
+          "ru": "крыша",
+          "source_en": "roof",
+          "source_de": "Dach",
+          "article": "das"
+        },
+        {
+          "id": "home-kitchen",
+          "de": "Küche",
+          "ru": "кухня",
+          "source_en": "kitchen",
+          "source_de": "Küche",
+          "article": "die"
+        },
+        {
+          "id": "home-bathroom",
+          "de": "Badezimmer",
+          "ru": "ванная комната",
+          "source_en": "bathroom",
+          "source_de": "Badezimmer,Bad",
+          "article": "das"
+        },
+        {
+          "id": "home-bedroom",
+          "de": "Schlafzimmer",
+          "ru": "спальня",
+          "source_en": "bedroom",
+          "source_de": "Schlafzimmer,Raum",
+          "article": "das"
+        },
+        {
+          "id": "home-garden",
+          "de": "Garten",
+          "ru": "сад",
+          "source_en": "garden",
+          "source_de": "Garten",
+          "article": "der"
+        },
+        {
+          "id": "home-light",
+          "de": "Licht",
+          "ru": "свет",
+          "source_en": "light",
+          "source_de": "Licht",
+          "article": "das"
+        },
+        {
+          "id": "home-lamp",
+          "de": "Lampe",
+          "ru": "лампа",
+          "source_en": "lamp",
+          "source_de": "Lampe",
+          "article": "die",
+          "visual": "lamp",
+          "gameCategory": "appliances"
+        },
+        {
+          "id": "home-key",
+          "de": "Schlüssel",
+          "ru": "ключ",
+          "source_en": "key",
+          "source_de": "Schlüssel",
+          "article": "der",
+          "visual": "key"
+        },
+        {
+          "id": "home-mirror",
+          "de": "Spiegel",
+          "ru": "зеркало",
+          "source_en": "mirror",
+          "source_de": "Spiegel",
+          "article": "der",
+          "visual": "mirror"
+        },
+        {
+          "id": "home-toilet",
+          "de": "Toilette",
+          "ru": "туалет",
+          "source_en": "toilet",
+          "source_de": "Toilette",
+          "article": "die",
+          "visual": "toilet"
+        },
+        {
+          "id": "home-shower",
+          "de": "Dusche",
+          "ru": "душ",
+          "source_en": "shower",
+          "source_de": "Dusche",
+          "article": "die",
+          "visual": "shower"
+        },
+        {
+          "id": "home-fridge",
+          "de": "Kühlschrank",
+          "ru": "холодильник",
+          "source_en": "fridge",
+          "source_de": "Kühlschrank",
+          "article": "der",
+          "visual": "fridge",
+          "gameCategory": "appliances"
+        },
+        {
+          "id": "home-stove",
+          "de": "Herd",
+          "ru": "кухонная плита",
+          "source_en": "stove",
+          "source_de": "Ofen, Herd",
+          "article": "der",
+          "visual": "stove",
+          "gameCategory": "appliances"
+        },
+        {
+          "id": "home-oven",
+          "de": "Ofen",
+          "ru": "духовка, печь",
+          "source_en": "oven",
+          "source_de": "Ofen",
+          "article": "der",
+          "visual": "oven",
+          "gameCategory": "appliances"
+        },
+        {
+          "id": "home-radio",
+          "de": "Radio",
+          "ru": "радиоприёмник",
+          "source_en": "radio",
+          "source_de": "Radio",
+          "article": "das",
+          "visual": "radio",
+          "gameCategory": "appliances"
+        },
+        {
+          "id": "home-telephone",
+          "de": "Telefon",
+          "ru": "телефон",
+          "source_en": "telephone",
+          "source_de": "Telefon",
+          "article": "das",
+          "visual": "telephone",
+          "gameCategory": "appliances"
+        },
+        {
+          "id": "home-computer",
+          "de": "Computer",
+          "ru": "компьютер",
+          "source_en": "computer",
+          "source_de": "Computer, Rechner",
+          "article": "der",
+          "visual": "computer",
+          "gameCategory": "appliances"
+        },
+        {
+          "id": "home-machine",
+          "de": "Maschine",
+          "ru": "машина, механизм",
+          "source_en": "machine",
+          "source_de": "Maschine",
+          "article": "die"
+        },
+        {
+          "id": "home-electricity",
+          "de": "Elektrizität",
+          "ru": "электричество",
+          "source_en": "electricity",
+          "source_de": "Elektrizität",
+          "article": "die"
+        },
+        {
+          "id": "home-heating",
+          "de": "Heizung",
+          "ru": "отопление",
+          "source_en": "heating",
+          "source_de": "Heizung",
+          "article": "die"
+        },
+        {
+          "id": "home-refrigerator",
+          "de": "Gefrierschrank",
+          "ru": "морозильник",
+          "source_en": "refrigerator",
+          "source_de": "Kühlschrank, Gefrierschrank",
+          "article": "der",
+          "visual": "freezer",
+          "gameCategory": "appliances"
+        }
+      ]
+    },
+    {
+      "id": "everyday",
+      "title": "Кухня и покупки",
+      "description": "Посуда, кухонные принадлежности и продукты.",
+      "trust": 55,
+      "words": [
+        {
+          "id": "everyday-knife",
+          "de": "Messer",
+          "ru": "нож",
+          "source_en": "knife",
+          "source_de": "Messer",
+          "article": "das",
+          "visual": "knife",
+          "gameCategory": "kitchen"
+        },
+        {
+          "id": "everyday-fork",
+          "de": "Gabel",
+          "ru": "вилка",
+          "source_en": "fork",
+          "source_de": "Gabel",
+          "article": "die",
+          "visual": "fork",
+          "gameCategory": "kitchen"
+        },
+        {
+          "id": "everyday-spoon",
+          "de": "Löffel",
+          "ru": "ложка",
+          "source_en": "spoon",
+          "source_de": "Löffel",
+          "article": "der",
+          "visual": "spoon",
+          "gameCategory": "kitchen"
+        },
+        {
+          "id": "everyday-plate",
+          "de": "Teller",
+          "ru": "тарелка",
+          "source_en": "plate",
+          "source_de": "Teller",
+          "article": "der",
+          "visual": "plate",
+          "gameCategory": "kitchen"
+        },
+        {
+          "id": "everyday-bowl",
+          "de": "Schüssel",
+          "ru": "миска",
+          "source_en": "bowl",
+          "source_de": "Schüssel,Schale",
+          "article": "die",
+          "visual": "bowl",
+          "gameCategory": "kitchen"
+        },
+        {
+          "id": "everyday-pan",
+          "de": "Pfanne",
+          "ru": "сковорода",
+          "source_en": "pan",
+          "source_de": "Pfanne",
+          "article": "die",
+          "visual": "pan",
+          "gameCategory": "kitchen"
+        },
+        {
+          "id": "everyday-pot",
+          "de": "Topf",
+          "ru": "кастрюля",
+          "source_en": "pot",
+          "source_de": "Topf",
+          "article": "der",
+          "visual": "pot",
+          "gameCategory": "kitchen"
+        },
+        {
+          "id": "everyday-bottle",
+          "de": "Flasche",
+          "ru": "бутылка",
+          "source_en": "bottle",
+          "source_de": "Flasche,Behälter",
+          "article": "die",
+          "visual": "bottle",
+          "gameCategory": "kitchen"
+        },
+        {
+          "id": "everyday-glass",
+          "de": "Glas",
+          "ru": "стакан",
+          "source_en": "glass",
+          "source_de": "Glas",
+          "article": "das",
+          "visual": "glass",
+          "gameCategory": "kitchen"
+        },
+        {
+          "id": "everyday-bag",
+          "de": "Tasche",
+          "ru": "сумка",
+          "source_en": "bag",
+          "source_de": "Tasche,Beutel",
+          "article": "die"
+        },
+        {
+          "id": "everyday-box",
+          "de": "Schachtel",
+          "ru": "коробка",
+          "source_en": "box",
+          "source_de": "Schachtel,Kasten",
+          "article": "die"
+        },
+        {
+          "id": "everyday-soup",
+          "de": "Suppe",
+          "ru": "суп",
+          "source_en": "soup",
+          "source_de": "Suppe",
+          "article": "die"
+        },
+        {
+          "id": "everyday-chicken",
+          "de": "Huhn",
+          "ru": "курица",
+          "source_en": "chicken",
+          "source_de": "Huhn, Geflügel",
+          "article": "das"
+        },
+        {
+          "id": "everyday-potato",
+          "de": "Kartoffel",
+          "ru": "картофель",
+          "source_en": "potato",
+          "source_de": "Kartoffel",
+          "article": "die"
+        },
+        {
+          "id": "everyday-tomato",
+          "de": "Tomate",
+          "ru": "помидор",
+          "source_en": "tomato",
+          "source_de": "Tomate",
+          "article": "die"
+        },
+        {
+          "id": "everyday-rice",
+          "de": "Reis",
+          "ru": "рис",
+          "source_en": "rice",
+          "source_de": "Reis",
+          "article": "der"
+        },
+        {
+          "id": "everyday-salad",
+          "de": "Salat",
+          "ru": "салат",
+          "source_en": "salad",
+          "source_de": "Salat",
+          "article": "der"
+        },
+        {
+          "id": "everyday-orange",
+          "de": "Orange",
+          "ru": "апельсин",
+          "source_en": "orange",
+          "source_de": "Orange",
+          "article": "die"
+        },
+        {
+          "id": "everyday-banana",
+          "de": "Banane",
+          "ru": "банан",
+          "source_en": "banana",
+          "source_de": "Banane,Frucht",
+          "article": "die"
+        },
+        {
+          "id": "everyday-lemon",
+          "de": "Zitrone",
+          "ru": "лимон",
+          "source_en": "lemon",
+          "source_de": "Zitrone",
+          "article": "die"
+        },
+        {
+          "id": "everyday-onion",
+          "de": "Zwiebel",
+          "ru": "лук",
+          "source_en": "onion",
+          "source_de": "Zwiebel",
+          "article": "die"
+        },
+        {
+          "id": "everyday-cake",
+          "de": "Kuchen",
+          "ru": "пирог, кекс",
+          "source_en": "cake",
+          "source_de": "Kuchen,Torte",
+          "article": "der"
+        },
+        {
+          "id": "everyday-chocolate",
+          "de": "Schokolade",
+          "ru": "шоколад",
+          "source_en": "chocolate",
+          "source_de": "Schokolade, Süßigkeit",
+          "article": "die"
+        },
+        {
+          "id": "everyday-butter",
+          "de": "Butter",
+          "ru": "сливочное масло",
+          "source_en": "butter",
+          "source_de": "Butter,Streichfett",
+          "article": "die"
+        },
+        {
+          "id": "everyday-jam",
+          "de": "Marmelade",
+          "ru": "варенье, джем",
+          "source_en": "jam",
+          "source_de": "Marmelade, Stau",
+          "article": "die"
+        },
+        {
+          "id": "everyday-oil",
+          "de": "Öl",
+          "ru": "растительное масло",
+          "source_en": "oil",
+          "source_de": "Öl",
+          "article": "das"
+        },
+        {
+          "id": "everyday-juice",
+          "de": "Saft",
+          "ru": "сок",
+          "source_en": "juice",
+          "source_de": "Saft",
+          "article": "der"
+        },
+        {
+          "id": "everyday-money",
+          "de": "Geld",
+          "ru": "деньги",
+          "source_en": "money",
+          "source_de": "Geld",
+          "article": "das"
+        },
+        {
+          "id": "everyday-price",
+          "de": "Preis",
+          "ru": "цена",
+          "source_en": "price",
+          "source_de": "Preis",
+          "article": "der"
+        },
+        {
+          "id": "everyday-buy",
+          "de": "kaufen",
+          "ru": "покупать",
+          "source_en": "buy",
+          "source_de": "kaufen,erwerben"
+        }
+      ]
+    },
+    {
+      "id": "actions",
+      "title": "Действия",
+      "description": "Говорить, понимать, помогать и действовать вместе.",
+      "trust": 60,
+      "words": [
+        {
+          "id": "actions-go",
+          "de": "gehen",
+          "ru": "идти",
+          "source_en": "go",
+          "source_de": "gehen"
+        },
+        {
+          "id": "actions-come",
+          "de": "kommen",
+          "ru": "приходить",
+          "source_en": "come",
+          "source_de": "kommen, herkommen"
+        },
+        {
+          "id": "actions-give",
+          "de": "geben",
+          "ru": "давать",
+          "source_en": "give",
+          "source_de": "geben"
+        },
+        {
+          "id": "actions-take",
+          "de": "nehmen",
+          "ru": "брать",
+          "source_en": "take",
+          "source_de": "nehmen"
+        },
+        {
+          "id": "actions-bring",
+          "de": "mitbringen",
+          "ru": "приносить с собой",
+          "source_en": "bring",
+          "source_de": "bringt,mitbringen"
+        },
+        {
+          "id": "actions-help",
+          "de": "helfen",
+          "ru": "помогать",
+          "source_en": "help",
+          "source_de": "helfen"
+        },
+        {
+          "id": "actions-want",
+          "de": "wollen",
+          "ru": "хотеть",
+          "source_en": "want",
+          "source_de": "wollen"
+        },
+        {
+          "id": "actions-need",
+          "de": "brauchen",
+          "ru": "нуждаться, требоваться",
+          "source_en": "need",
+          "source_de": "brauchen"
+        },
+        {
+          "id": "actions-have",
+          "de": "haben",
+          "ru": "иметь",
+          "source_en": "have",
+          "source_de": "haben"
+        },
+        {
+          "id": "actions-be",
+          "de": "sein",
+          "ru": "быть",
+          "source_en": "be",
+          "source_de": "sein,existieren"
+        },
+        {
+          "id": "actions-can",
+          "de": "können",
+          "ru": "мочь, уметь",
+          "source_en": "can",
+          "source_de": "können,in der Lage sein"
+        },
+        {
+          "id": "actions-do",
+          "de": "tun",
+          "ru": "делать",
+          "source_en": "do",
+          "source_de": "tun"
+        },
+        {
+          "id": "actions-like",
+          "de": "mögen",
+          "ru": "любить, нравиться",
+          "source_en": "like",
+          "source_de": "mögen"
+        },
+        {
+          "id": "actions-see",
+          "de": "sehen",
+          "ru": "видеть",
+          "source_en": "see",
+          "source_de": "sehen"
+        },
+        {
+          "id": "actions-hear",
+          "de": "hören",
+          "ru": "слышать, слушать",
+          "source_en": "hear",
+          "source_de": "hören"
+        },
+        {
+          "id": "actions-speak",
+          "de": "sprechen",
+          "ru": "говорить",
+          "source_en": "speak",
+          "source_de": "sprechen"
+        },
+        {
+          "id": "actions-say",
+          "de": "sagen",
+          "ru": "сказать",
+          "source_en": "say",
+          "source_de": "sagen"
+        },
+        {
+          "id": "actions-ask",
+          "de": "fragen",
+          "ru": "спрашивать",
+          "source_en": "ask",
+          "source_de": "fragen,bitten"
+        },
+        {
+          "id": "actions-answer",
+          "de": "Antwort",
+          "ru": "ответ",
+          "source_en": "answer",
+          "source_de": "Antwort,Beantwortung",
+          "article": "die"
+        },
+        {
+          "id": "actions-understand",
+          "de": "verstehen",
+          "ru": "понимать",
+          "source_en": "understand",
+          "source_de": "verstehen"
+        },
+        {
+          "id": "actions-know",
+          "de": "wissen",
+          "ru": "знать",
+          "source_en": "know",
+          "source_de": "wissen"
+        },
+        {
+          "id": "actions-learn",
+          "de": "lernen",
+          "ru": "учиться, изучать",
+          "source_en": "learn",
+          "source_de": "lernen"
+        },
+        {
+          "id": "actions-read",
+          "de": "lesen",
+          "ru": "читать",
+          "source_en": "read",
+          "source_de": "lesen"
+        },
+        {
+          "id": "actions-write",
+          "de": "schreiben",
+          "ru": "писать",
+          "source_en": "write",
+          "source_de": "schreiben"
+        },
+        {
+          "id": "actions-open",
+          "de": "öffnen",
+          "ru": "открывать",
+          "source_en": "open",
+          "source_de": "öffnen"
+        },
+        {
+          "id": "actions-close",
+          "de": "schließen",
+          "ru": "закрывать",
+          "source_en": "close",
+          "source_de": "schließen, zumachen"
+        },
+        {
+          "id": "actions-wash",
+          "de": "waschen",
+          "ru": "мыть, стирать",
+          "source_en": "wash",
+          "source_de": "waschen"
+        },
+        {
+          "id": "actions-clean",
+          "de": "sauber",
+          "ru": "чистый",
+          "source_en": "clean",
+          "source_de": "sauber, rein"
+        },
+        {
+          "id": "actions-feel",
+          "de": "fühlen",
+          "ru": "чувствовать",
+          "source_en": "feel",
+          "source_de": "fühlen"
+        },
+        {
+          "id": "actions-stay",
+          "de": "bleiben",
+          "ru": "оставаться",
+          "source_en": "stay",
+          "source_de": "bleiben"
+        }
+      ]
+    },
+    {
+      "id": "feelings",
+      "title": "Чувства и свойства",
+      "description": "Замечать настроение и описывать окружающее.",
+      "trust": 65,
+      "words": [
+        {
+          "id": "feelings-happy",
+          "de": "glücklich",
+          "ru": "счастливый",
+          "source_en": "happy",
+          "source_de": "glücklich"
+        },
+        {
+          "id": "feelings-sad",
+          "de": "traurig",
+          "ru": "грустный",
+          "source_en": "sad",
+          "source_de": "traurig"
+        },
+        {
+          "id": "feelings-angry",
+          "de": "verärgert",
+          "ru": "недовольный, рассерженный",
+          "source_en": "angry",
+          "source_de": "wütend,verärgert"
+        },
+        {
+          "id": "feelings-bored",
+          "de": "gelangweilt",
+          "ru": "скучающий",
+          "source_en": "bored",
+          "source_de": "gelangweilt,interesselos"
+        },
+        {
+          "id": "feelings-afraid",
+          "de": "ängstlich",
+          "ru": "испуганный, боязливый",
+          "source_en": "afraid",
+          "source_de": "ängstlich,besorgt"
+        },
+        {
+          "id": "feelings-calm",
+          "de": "ruhig",
+          "ru": "спокойный",
+          "source_en": "calm",
+          "source_de": "ruhig,gelassen"
+        },
+        {
+          "id": "feelings-small",
+          "de": "klein",
+          "ru": "маленький",
+          "source_en": "small",
+          "source_de": "klein"
+        },
+        {
+          "id": "feelings-friendly",
+          "de": "freundlich",
+          "ru": "дружелюбный",
+          "source_en": "friendly",
+          "source_de": "freundlich"
+        },
+        {
+          "id": "feelings-careful",
+          "de": "vorsichtig",
+          "ru": "осторожный",
+          "source_en": "careful",
+          "source_de": "vorsichtig,sorgfältig"
+        },
+        {
+          "id": "feelings-brave",
+          "de": "mutig",
+          "ru": "смелый",
+          "source_en": "brave",
+          "source_de": "mutig,tapfer"
+        },
+        {
+          "id": "feelings-funny",
+          "de": "lustig",
+          "ru": "весёлый, смешной",
+          "source_en": "funny",
+          "source_de": "lustig"
+        },
+        {
+          "id": "feelings-serious",
+          "de": "ernst",
+          "ru": "серьёзный",
+          "source_en": "serious",
+          "source_de": "ernst"
+        },
+        {
+          "id": "feelings-interested",
+          "de": "interessiert",
+          "ru": "заинтересованный",
+          "source_en": "interested",
+          "source_de": "interessiert"
+        },
+        {
+          "id": "feelings-surprised",
+          "de": "überrascht",
+          "ru": "удивлённый",
+          "source_en": "surprised",
+          "source_de": "überrascht"
+        },
+        {
+          "id": "feelings-excited",
+          "de": "aufgeregt",
+          "ru": "взволнованный",
+          "source_en": "excited",
+          "source_de": "aufgeregt"
+        },
+        {
+          "id": "feelings-worried",
+          "de": "besorgt",
+          "ru": "обеспокоенный",
+          "source_en": "worried",
+          "source_de": "besorgt"
+        },
+        {
+          "id": "feelings-comfortable",
+          "de": "bequem",
+          "ru": "удобный",
+          "source_en": "comfortable",
+          "source_de": "komfortabel, bequem"
+        },
+        {
+          "id": "feelings-alone",
+          "de": "allein",
+          "ru": "один, в одиночестве",
+          "source_en": "alone",
+          "source_de": "allein,einsam"
+        },
+        {
+          "id": "feelings-soft",
+          "de": "weich",
+          "ru": "мягкий на ощупь",
+          "source_en": "soft",
+          "source_de": "weich"
+        },
+        {
+          "id": "feelings-beautiful",
+          "de": "schön",
+          "ru": "красивый",
+          "source_en": "beautiful",
+          "source_de": "schön,wunderschön"
+        },
+        {
+          "id": "feelings-good",
+          "de": "gut",
+          "ru": "хороший",
+          "source_en": "good",
+          "source_de": "gut"
+        },
+        {
+          "id": "feelings-bad",
+          "de": "schlecht",
+          "ru": "плохой",
+          "source_en": "bad",
+          "source_de": "schlecht,böse"
+        },
+        {
+          "id": "feelings-warm",
+          "de": "warm",
+          "ru": "тёплый",
+          "source_en": "warm",
+          "source_de": "warm"
+        },
+        {
+          "id": "feelings-cold",
+          "de": "kalt",
+          "ru": "холодный",
+          "source_en": "cold",
+          "source_de": "kalt, kühl"
+        },
+        {
+          "id": "feelings-hot",
+          "de": "heiß",
+          "ru": "горячий",
+          "source_en": "hot",
+          "source_de": "heiß"
+        },
+        {
+          "id": "feelings-wet",
+          "de": "nass",
+          "ru": "мокрый",
+          "source_en": "wet",
+          "source_de": "nass"
+        },
+        {
+          "id": "feelings-better",
+          "de": "besser",
+          "ru": "лучше",
+          "source_en": "better",
+          "source_de": "besser,lieber"
+        },
+        {
+          "id": "feelings-dirty",
+          "de": "schmutzig",
+          "ru": "грязный",
+          "source_en": "dirty",
+          "source_de": "schmutzig"
+        },
+        {
+          "id": "feelings-full",
+          "de": "voll",
+          "ru": "полный",
+          "source_en": "full",
+          "source_de": "voll"
+        },
+        {
+          "id": "feelings-empty",
+          "de": "leer",
+          "ru": "пустой",
+          "source_en": "empty",
+          "source_de": "leer"
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "title": "Люди и отношения",
+      "description": "Говорить о себе, семье и других людях.",
+      "trust": 70,
+      "words": [
+        {
+          "id": "people-i",
+          "de": "ich",
+          "ru": "я",
+          "source_en": "I",
+          "source_de": "ich, persönliches Pronomen"
+        },
+        {
+          "id": "people-you",
+          "de": "du",
+          "ru": "ты",
+          "source_en": "you",
+          "source_de": "du"
+        },
+        {
+          "id": "people-he",
+          "de": "er",
+          "ru": "он",
+          "source_en": "he",
+          "source_de": "er"
+        },
+        {
+          "id": "people-she",
+          "de": "sie",
+          "ru": "она; они",
+          "source_en": "she",
+          "source_de": "sie"
+        },
+        {
+          "id": "people-it",
+          "de": "es",
+          "ru": "оно",
+          "source_en": "it",
+          "source_de": "es"
+        },
+        {
+          "id": "people-we",
+          "de": "wir",
+          "ru": "мы",
+          "source_en": "we",
+          "source_de": "wir"
+        },
+        {
+          "id": "people-my",
+          "de": "mein",
+          "ru": "мой",
+          "source_en": "my",
+          "source_de": "mein"
+        },
+        {
+          "id": "people-your",
+          "de": "dein",
+          "ru": "твой",
+          "source_en": "your",
+          "source_de": "dein"
+        },
+        {
+          "id": "people-her",
+          "de": "ihr",
+          "ru": "её; их",
+          "source_en": "her",
+          "source_de": "ihr"
+        },
+        {
+          "id": "people-our",
+          "de": "unser",
+          "ru": "наш",
+          "source_en": "our",
+          "source_de": "unser"
+        },
+        {
+          "id": "people-all",
+          "de": "alle",
+          "ru": "все",
+          "source_en": "all",
+          "source_de": "alle,jede"
+        },
+        {
+          "id": "people-everyone",
+          "de": "jeder",
+          "ru": "каждый",
+          "source_en": "everyone",
+          "source_de": "jeder"
+        },
+        {
+          "id": "people-person",
+          "de": "Person",
+          "ru": "человек, личность",
+          "source_en": "person",
+          "source_de": "Person",
+          "article": "die"
+        },
+        {
+          "id": "people-man",
+          "de": "Mann",
+          "ru": "мужчина",
+          "source_en": "man",
+          "source_de": "Mann",
+          "article": "der"
+        },
+        {
+          "id": "people-woman",
+          "de": "Frau",
+          "ru": "женщина",
+          "source_en": "woman",
+          "source_de": "Frau",
+          "article": "die"
+        },
+        {
+          "id": "people-child",
+          "de": "Kind",
+          "ru": "ребёнок",
+          "source_en": "child",
+          "source_de": "Kind, Nachkomme",
+          "article": "das"
+        },
+        {
+          "id": "people-baby",
+          "de": "Baby",
+          "ru": "младенец",
+          "source_en": "baby",
+          "source_de": "Baby,Säugling",
+          "article": "das"
+        },
+        {
+          "id": "people-boy",
+          "de": "Junge",
+          "ru": "мальчик",
+          "source_en": "boy",
+          "source_de": "Junge,Kind",
+          "article": "der"
+        },
+        {
+          "id": "people-girl",
+          "de": "Mädchen",
+          "ru": "девочка",
+          "source_en": "girl",
+          "source_de": "Mädchen",
+          "article": "das"
+        },
+        {
+          "id": "people-mother",
+          "de": "Mutter",
+          "ru": "мама",
+          "source_en": "mother",
+          "source_de": "Mutter",
+          "article": "die"
+        },
+        {
+          "id": "people-father",
+          "de": "Vater",
+          "ru": "папа",
+          "source_en": "father",
+          "source_de": "Vater",
+          "article": "der"
+        },
+        {
+          "id": "people-parent",
+          "de": "Elternteil",
+          "ru": "родитель",
+          "source_en": "parent",
+          "source_de": "Elternteil",
+          "article": "der"
+        },
+        {
+          "id": "people-brother",
+          "de": "Bruder",
+          "ru": "брат",
+          "source_en": "brother",
+          "source_de": "Bruder,Verwandter",
+          "article": "der"
+        },
+        {
+          "id": "people-sister",
+          "de": "Schwester",
+          "ru": "сестра",
+          "source_en": "sister",
+          "source_de": "Schwester",
+          "article": "die"
+        },
+        {
+          "id": "people-family",
+          "de": "Familie",
+          "ru": "семья",
+          "source_en": "family",
+          "source_de": "Familie",
+          "article": "die"
+        },
+        {
+          "id": "people-friend",
+          "de": "Freund",
+          "ru": "друг",
+          "source_en": "friend",
+          "source_de": "Freund",
+          "article": "der"
+        },
+        {
+          "id": "people-name",
+          "de": "Name",
+          "ru": "имя",
+          "source_en": "name",
+          "source_de": "Name",
+          "article": "der"
+        },
+        {
+          "id": "people-teacher",
+          "de": "Lehrer",
+          "ru": "учитель",
+          "source_en": "teacher",
+          "source_de": "Lehrer",
+          "article": "der"
+        },
+        {
+          "id": "people-student",
+          "de": "Student",
+          "ru": "студент",
+          "source_en": "student",
+          "source_de": "Student",
+          "article": "der"
+        },
+        {
+          "id": "people-aunt",
+          "de": "Tante",
+          "ru": "тётя",
+          "source_en": "aunt",
+          "source_de": "Tante,Familienmitglied",
+          "article": "die"
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "title": "Время и привычки",
+      "description": "Дни недели, части дня и повседневный ритм.",
+      "trust": 75,
+      "words": [
+        {
+          "id": "time-time",
+          "de": "Zeit",
+          "ru": "время",
+          "source_en": "time",
+          "source_de": "Zeit",
+          "article": "die"
+        },
+        {
+          "id": "time-day",
+          "de": "Tag",
+          "ru": "день",
+          "source_en": "day",
+          "source_de": "Tag,Wochentag",
+          "article": "der"
+        },
+        {
+          "id": "time-night",
+          "de": "Nacht",
+          "ru": "ночь",
+          "source_en": "night",
+          "source_de": "Nacht",
+          "article": "die"
+        },
+        {
+          "id": "time-morning",
+          "de": "Morgen",
+          "ru": "утро",
+          "source_en": "morning",
+          "source_de": "Morgen",
+          "article": "der"
+        },
+        {
+          "id": "time-evening",
+          "de": "Abend",
+          "ru": "вечер",
+          "source_en": "evening",
+          "source_de": "Abend",
+          "article": "der"
+        },
+        {
+          "id": "time-today",
+          "de": "heute",
+          "ru": "сегодня",
+          "source_en": "today",
+          "source_de": "heute"
+        },
+        {
+          "id": "time-afternoon",
+          "de": "Nachmittag",
+          "ru": "время после полудня",
+          "source_en": "afternoon",
+          "source_de": "Nachmittag,Tageszeit",
+          "article": "der"
+        },
+        {
+          "id": "time-yesterday",
+          "de": "gestern",
+          "ru": "вчера",
+          "source_en": "yesterday",
+          "source_de": "gestern"
+        },
+        {
+          "id": "time-now",
+          "de": "jetzt",
+          "ru": "сейчас",
+          "source_en": "now",
+          "source_de": "jetzt"
+        },
+        {
+          "id": "time-later",
+          "de": "später",
+          "ru": "позже",
+          "source_en": "later",
+          "source_de": "später"
+        },
+        {
+          "id": "time-early",
+          "de": "früh",
+          "ru": "рано",
+          "source_en": "early",
+          "source_de": "früh"
+        },
+        {
+          "id": "time-late",
+          "de": "spät",
+          "ru": "поздно",
+          "source_en": "late",
+          "source_de": "spät"
+        },
+        {
+          "id": "time-soon",
+          "de": "bald",
+          "ru": "скоро",
+          "source_en": "soon",
+          "source_de": "bald"
+        },
+        {
+          "id": "time-always",
+          "de": "immer",
+          "ru": "всегда",
+          "source_en": "always",
+          "source_de": "immer,stets"
+        },
+        {
+          "id": "time-often",
+          "de": "oft",
+          "ru": "часто",
+          "source_en": "often",
+          "source_de": "oft"
+        },
+        {
+          "id": "time-sometimes",
+          "de": "manchmal",
+          "ru": "иногда",
+          "source_en": "sometimes",
+          "source_de": "manchmal"
+        },
+        {
+          "id": "time-never",
+          "de": "nie",
+          "ru": "никогда",
+          "source_en": "never",
+          "source_de": "nie"
+        },
+        {
+          "id": "time-minute",
+          "de": "Minute",
+          "ru": "минута",
+          "source_en": "minute",
+          "source_de": "Minute",
+          "article": "die"
+        },
+        {
+          "id": "time-hour",
+          "de": "Stunde",
+          "ru": "час",
+          "source_en": "hour",
+          "source_de": "Stunde",
+          "article": "die"
+        },
+        {
+          "id": "time-week",
+          "de": "Woche",
+          "ru": "неделя",
+          "source_en": "week",
+          "source_de": "Woche",
+          "article": "die"
+        },
+        {
+          "id": "time-month",
+          "de": "Monat",
+          "ru": "месяц",
+          "source_en": "month",
+          "source_de": "Monat",
+          "article": "der"
+        },
+        {
+          "id": "time-year",
+          "de": "Jahr",
+          "ru": "год",
+          "source_en": "year",
+          "source_de": "Jahr",
+          "article": "das"
+        },
+        {
+          "id": "time-monday",
+          "de": "Montag",
+          "ru": "понедельник",
+          "source_en": "Monday",
+          "source_de": "Montag, Wochentag",
+          "article": "der"
+        },
+        {
+          "id": "time-tuesday",
+          "de": "Dienstag",
+          "ru": "вторник",
+          "source_en": "Tuesday",
+          "source_de": "Dienstag, Wochentag",
+          "article": "der"
+        },
+        {
+          "id": "time-wednesday",
+          "de": "Mittwoch",
+          "ru": "среда",
+          "source_en": "Wednesday",
+          "source_de": "Mittwoch, Wochentag",
+          "article": "der"
+        },
+        {
+          "id": "time-thursday",
+          "de": "Donnerstag",
+          "ru": "четверг",
+          "source_en": "Thursday",
+          "source_de": "Donnerstag, Wochentag",
+          "article": "der"
+        },
+        {
+          "id": "time-friday",
+          "de": "Freitag",
+          "ru": "пятница",
+          "source_en": "Friday",
+          "source_de": "Freitag, Wochentag",
+          "article": "der"
+        },
+        {
+          "id": "time-saturday",
+          "de": "Samstag",
+          "ru": "суббота",
+          "source_en": "Saturday",
+          "source_de": "Samstag, Wochentag",
+          "article": "der"
+        },
+        {
+          "id": "time-sunday",
+          "de": "Sonntag",
+          "ru": "воскресенье",
+          "source_en": "Sunday",
+          "source_de": "Sonntag, Wochentag",
+          "article": "der"
+        },
+        {
+          "id": "time-again",
+          "de": "wieder",
+          "ru": "снова",
+          "source_en": "again",
+          "source_de": "wieder,noch einmal"
+        }
+      ]
+    },
+    {
+      "id": "places",
+      "title": "Места и дорога",
+      "description": "Ориентироваться в городе и рассказывать о пути.",
+      "trust": 80,
+      "words": [
+        {
+          "id": "places-place",
+          "de": "Ort",
+          "ru": "место",
+          "source_en": "place",
+          "source_de": "Ort",
+          "article": "der"
+        },
+        {
+          "id": "places-capital",
+          "de": "Hauptstadt",
+          "ru": "столица",
+          "source_en": "capital",
+          "source_de": "Hauptstadt,Kapital",
+          "article": "die"
+        },
+        {
+          "id": "places-town",
+          "de": "Stadt",
+          "ru": "город",
+          "source_en": "town",
+          "source_de": "Stadt",
+          "article": "die"
+        },
+        {
+          "id": "places-village",
+          "de": "Dorf",
+          "ru": "деревня",
+          "source_en": "village",
+          "source_de": "Dorf",
+          "article": "das"
+        },
+        {
+          "id": "places-street",
+          "de": "Straße",
+          "ru": "улица",
+          "source_en": "street",
+          "source_de": "Straße",
+          "article": "die"
+        },
+        {
+          "id": "places-path",
+          "de": "Pfad",
+          "ru": "тропинка",
+          "source_en": "path",
+          "source_de": "Pfad",
+          "article": "der"
+        },
+        {
+          "id": "places-park",
+          "de": "Park",
+          "ru": "парк",
+          "source_en": "park",
+          "source_de": "Park",
+          "article": "der"
+        },
+        {
+          "id": "places-school",
+          "de": "Schule",
+          "ru": "школа",
+          "source_en": "school",
+          "source_de": "Schule",
+          "article": "die"
+        },
+        {
+          "id": "places-shop",
+          "de": "Geschäft",
+          "ru": "магазин",
+          "source_en": "shop",
+          "source_de": "Geschäft",
+          "article": "das"
+        },
+        {
+          "id": "places-market",
+          "de": "Markt",
+          "ru": "рынок",
+          "source_en": "market",
+          "source_de": "Markt",
+          "article": "der"
+        },
+        {
+          "id": "places-hospital",
+          "de": "Krankenhaus",
+          "ru": "больница",
+          "source_en": "hospital",
+          "source_de": "Krankenhaus",
+          "article": "das"
+        },
+        {
+          "id": "places-station",
+          "de": "Station",
+          "ru": "станция",
+          "source_en": "station",
+          "source_de": "Station",
+          "article": "die"
+        },
+        {
+          "id": "places-bus",
+          "de": "Bus",
+          "ru": "автобус",
+          "source_en": "bus",
+          "source_de": "Bus,Omnibus",
+          "article": "der"
+        },
+        {
+          "id": "places-train",
+          "de": "Zug",
+          "ru": "поезд",
+          "source_en": "train",
+          "source_de": "Zug",
+          "article": "der"
+        },
+        {
+          "id": "places-car",
+          "de": "Auto",
+          "ru": "автомобиль",
+          "source_en": "car",
+          "source_de": "Auto,Fahrzeug",
+          "article": "das"
+        },
+        {
+          "id": "places-bicycle",
+          "de": "Fahrrad",
+          "ru": "велосипед",
+          "source_en": "bicycle",
+          "source_de": "Fahrrad,Rad",
+          "article": "das"
+        },
+        {
+          "id": "places-airport",
+          "de": "Flughafen",
+          "ru": "аэропорт",
+          "source_en": "airport",
+          "source_de": "Flughafen,Airport",
+          "article": "der"
+        },
+        {
+          "id": "places-bridge",
+          "de": "Brücke",
+          "ru": "мост",
+          "source_en": "bridge",
+          "source_de": "Brücke,Überführung",
+          "article": "die"
+        },
+        {
+          "id": "places-library",
+          "de": "Bibliothek",
+          "ru": "библиотека",
+          "source_en": "library",
+          "source_de": "Bibliothek",
+          "article": "die"
+        },
+        {
+          "id": "places-restaurant",
+          "de": "Restaurant",
+          "ru": "ресторан",
+          "source_en": "restaurant",
+          "source_de": "Restaurant",
+          "article": "das"
+        },
+        {
+          "id": "places-hotel",
+          "de": "Hotel",
+          "ru": "отель",
+          "source_en": "hotel",
+          "source_de": "Hotel",
+          "article": "das"
+        },
+        {
+          "id": "places-bank",
+          "de": "Bank",
+          "ru": "банк",
+          "source_en": "bank",
+          "source_de": "Bank,Geldinstitut",
+          "article": "die"
+        },
+        {
+          "id": "places-beach",
+          "de": "Strand",
+          "ru": "пляж",
+          "source_en": "beach",
+          "source_de": "Strand,Küste",
+          "article": "der"
+        },
+        {
+          "id": "places-forest",
+          "de": "Wald",
+          "ru": "лес",
+          "source_en": "forest",
+          "source_de": "Wald",
+          "article": "der"
+        },
+        {
+          "id": "places-river",
+          "de": "Fluss",
+          "ru": "река",
+          "source_en": "river",
+          "source_de": "Fluss",
+          "article": "der"
+        },
+        {
+          "id": "places-sea",
+          "de": "Meer",
+          "ru": "море",
+          "source_en": "sea",
+          "source_de": "Meer",
+          "article": "das"
+        },
+        {
+          "id": "places-mountain",
+          "de": "Berg",
+          "ru": "гора",
+          "source_en": "mountain",
+          "source_de": "Berg",
+          "article": "der"
+        },
+        {
+          "id": "places-country",
+          "de": "Land",
+          "ru": "страна",
+          "source_en": "country",
+          "source_de": "Land, Staat",
+          "article": "das"
+        },
+        {
+          "id": "places-world",
+          "de": "Welt",
+          "ru": "мир",
+          "source_en": "world",
+          "source_de": "Welt",
+          "article": "die"
+        },
+        {
+          "id": "places-map",
+          "de": "Karte",
+          "ru": "карта",
+          "source_en": "map",
+          "source_de": "Karte",
+          "article": "die"
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "title": "Общение",
+      "description": "Вопросы, вежливые слова и связи между фразами.",
+      "trust": 90,
+      "words": [
+        {
+          "id": "communication-yes",
+          "de": "ja",
+          "ru": "да",
+          "source_en": "yes",
+          "source_de": "ja"
+        },
+        {
+          "id": "communication-no",
+          "de": "nein",
+          "ru": "нет",
+          "source_en": "no",
+          "source_de": "nein"
+        },
+        {
+          "id": "communication-please",
+          "de": "bitte",
+          "ru": "пожалуйста",
+          "source_en": "please",
+          "source_de": "bitte"
+        },
+        {
+          "id": "communication-thanks",
+          "de": "Danke",
+          "ru": "спасибо",
+          "source_en": "thanks",
+          "source_de": "Danke"
+        },
+        {
+          "id": "communication-hello",
+          "de": "Hallo",
+          "ru": "привет",
+          "source_en": "hello",
+          "source_de": "Hallo"
+        },
+        {
+          "id": "communication-goodbye",
+          "de": "Auf Wiedersehen",
+          "ru": "до свидания",
+          "source_en": "goodbye",
+          "source_de": "Auf Wiedersehen"
+        },
+        {
+          "id": "communication-sorry",
+          "de": "Entschuldigung",
+          "ru": "извинение; извините",
+          "source_en": "sorry",
+          "source_de": "Entschuldigung",
+          "article": "die"
+        },
+        {
+          "id": "communication-the",
+          "de": "der",
+          "ru": "определённый артикль мужского рода",
+          "source_en": "the",
+          "source_de": "der"
+        },
+        {
+          "id": "communication-a",
+          "de": "ein",
+          "ru": "неопределённый артикль: один, какой-то",
+          "source_en": "a",
+          "source_de": "ein, eine"
+        },
+        {
+          "id": "communication-and",
+          "de": "und",
+          "ru": "и",
+          "source_en": "and",
+          "source_de": "und,außerdem"
+        },
+        {
+          "id": "communication-or",
+          "de": "oder",
+          "ru": "или",
+          "source_en": "or",
+          "source_de": "oder"
+        },
+        {
+          "id": "communication-but",
+          "de": "aber",
+          "ru": "но",
+          "source_en": "but",
+          "source_de": "aber,jedoch"
+        },
+        {
+          "id": "communication-not",
+          "de": "nicht",
+          "ru": "не",
+          "source_en": "not",
+          "source_de": "nicht"
+        },
+        {
+          "id": "communication-also",
+          "de": "auch",
+          "ru": "тоже",
+          "source_en": "also",
+          "source_de": "auch,ebenfalls"
+        },
+        {
+          "id": "communication-here",
+          "de": "hier",
+          "ru": "здесь",
+          "source_en": "here",
+          "source_de": "hier"
+        },
+        {
+          "id": "communication-on",
+          "de": "an",
+          "ru": "на, у; включён",
+          "source_en": "on",
+          "source_de": "an"
+        },
+        {
+          "id": "communication-together",
+          "de": "zusammen",
+          "ru": "вместе",
+          "source_en": "together",
+          "source_de": "zusammen"
+        },
+        {
+          "id": "communication-that",
+          "de": "das",
+          "ru": "это, то",
+          "source_en": "that",
+          "source_de": "das"
+        },
+        {
+          "id": "communication-who",
+          "de": "wer",
+          "ru": "кто",
+          "source_en": "who",
+          "source_de": "wer"
+        },
+        {
+          "id": "communication-what",
+          "de": "was",
+          "ru": "что",
+          "source_en": "what",
+          "source_de": "was"
+        },
+        {
+          "id": "communication-where",
+          "de": "wo",
+          "ru": "где",
+          "source_en": "where",
+          "source_de": "wo"
+        },
+        {
+          "id": "communication-when",
+          "de": "wann",
+          "ru": "когда",
+          "source_en": "when",
+          "source_de": "wann"
+        },
+        {
+          "id": "communication-why",
+          "de": "warum",
+          "ru": "почему",
+          "source_en": "why",
+          "source_de": "warum"
+        },
+        {
+          "id": "communication-how",
+          "de": "wie",
+          "ru": "как",
+          "source_en": "how",
+          "source_de": "wie"
+        },
+        {
+          "id": "communication-because",
+          "de": "weil",
+          "ru": "потому что",
+          "source_en": "because",
+          "source_de": "weil,da"
+        },
+        {
+          "id": "communication-with",
+          "de": "mit",
+          "ru": "с",
+          "source_en": "with",
+          "source_de": "mit"
+        },
+        {
+          "id": "communication-yet",
+          "de": "noch",
+          "ru": "ещё",
+          "source_en": "yet",
+          "source_de": "noch"
+        },
+        {
+          "id": "communication-out",
+          "de": "aus",
+          "ru": "из; выключен",
+          "source_en": "out",
+          "source_de": "aus"
+        },
+        {
+          "id": "communication-in",
+          "de": "in",
+          "ru": "в, внутри",
+          "source_en": "in",
+          "source_de": "in"
+        },
+        {
+          "id": "communication-more",
+          "de": "mehr",
+          "ru": "больше",
+          "source_en": "more",
+          "source_de": "mehr"
+        }
+      ]
+    },
+    {
+      "id": "nature",
+      "title": "Мир вокруг",
+      "description": "Погода, растения, животные и природа.",
+      "trust": 95,
+      "words": [
+        {
+          "id": "nature-sun",
+          "de": "Sonne",
+          "ru": "солнце",
+          "source_en": "sun",
+          "source_de": "Sonne",
+          "article": "die",
+          "visual": "sun"
+        },
+        {
+          "id": "nature-moon",
+          "de": "Mond",
+          "ru": "луна",
+          "source_en": "moon",
+          "source_de": "Mond",
+          "article": "der",
+          "visual": "moon"
+        },
+        {
+          "id": "nature-star",
+          "de": "Stern",
+          "ru": "звезда",
+          "source_en": "star",
+          "source_de": "Stern",
+          "article": "der"
+        },
+        {
+          "id": "nature-sky",
+          "de": "Himmel",
+          "ru": "небо",
+          "source_en": "sky",
+          "source_de": "Himmel",
+          "article": "der"
+        },
+        {
+          "id": "nature-cloud",
+          "de": "Wolke",
+          "ru": "облако",
+          "source_en": "cloud",
+          "source_de": "Wolke, Datenwolke",
+          "article": "die"
+        },
+        {
+          "id": "nature-rain",
+          "de": "Regen",
+          "ru": "дождь",
+          "source_en": "rain",
+          "source_de": "Regen",
+          "article": "der"
+        },
+        {
+          "id": "nature-snow",
+          "de": "Schnee",
+          "ru": "снег",
+          "source_en": "snow",
+          "source_de": "Schnee",
+          "article": "der"
+        },
+        {
+          "id": "nature-wind",
+          "de": "Wind",
+          "ru": "ветер",
+          "source_en": "wind",
+          "source_de": "Wind",
+          "article": "der"
+        },
+        {
+          "id": "nature-weather",
+          "de": "Wetter",
+          "ru": "погода",
+          "source_en": "weather",
+          "source_de": "Wetter",
+          "article": "das"
+        },
+        {
+          "id": "nature-tree",
+          "de": "Baum",
+          "ru": "дерево",
+          "source_en": "tree",
+          "source_de": "Baum",
+          "article": "der",
+          "visual": "tree"
+        },
+        {
+          "id": "nature-flower",
+          "de": "Blume",
+          "ru": "цветок",
+          "source_en": "flower",
+          "source_de": "Blume",
+          "article": "die",
+          "visual": "flower"
+        },
+        {
+          "id": "nature-grass",
+          "de": "Gras",
+          "ru": "трава",
+          "source_en": "grass",
+          "source_de": "Gras",
+          "article": "das"
+        },
+        {
+          "id": "nature-leaf",
+          "de": "Blatt",
+          "ru": "лист",
+          "source_en": "leaf",
+          "source_de": "Blatt",
+          "article": "das"
+        },
+        {
+          "id": "nature-plant",
+          "de": "Pflanze",
+          "ru": "растение",
+          "source_en": "plant",
+          "source_de": "Pflanze",
+          "article": "die"
+        },
+        {
+          "id": "nature-animal",
+          "de": "Tier",
+          "ru": "животное",
+          "source_en": "animal",
+          "source_de": "Tier,Lebewesen",
+          "article": "das"
+        },
+        {
+          "id": "nature-cat",
+          "de": "Katze",
+          "ru": "кошка",
+          "source_en": "cat",
+          "source_de": "Katze,Haustier",
+          "article": "die",
+          "visual": "cat"
+        },
+        {
+          "id": "nature-dog",
+          "de": "Hund",
+          "ru": "собака",
+          "source_en": "dog",
+          "source_de": "Hund",
+          "article": "der",
+          "visual": "dog"
+        },
+        {
+          "id": "nature-bird",
+          "de": "Vogel",
+          "ru": "птица",
+          "source_en": "bird",
+          "source_de": "Vogel,Tier",
+          "article": "der"
+        },
+        {
+          "id": "nature-horse",
+          "de": "Pferd",
+          "ru": "лошадь",
+          "source_en": "horse",
+          "source_de": "Pferd",
+          "article": "das"
+        },
+        {
+          "id": "nature-cow",
+          "de": "Kuh",
+          "ru": "корова",
+          "source_en": "cow",
+          "source_de": "Kuh, Rind",
+          "article": "die"
+        },
+        {
+          "id": "nature-pig",
+          "de": "Schwein",
+          "ru": "свинья",
+          "source_en": "pig",
+          "source_de": "Schwein, Hausschwein",
+          "article": "das"
+        },
+        {
+          "id": "nature-sheep",
+          "de": "Schaf",
+          "ru": "овца",
+          "source_en": "sheep",
+          "source_de": "Schaf",
+          "article": "das"
+        },
+        {
+          "id": "nature-elephant",
+          "de": "Elefant",
+          "ru": "слон",
+          "source_en": "elephant",
+          "source_de": "Elefant",
+          "article": "der"
+        },
+        {
+          "id": "nature-insect",
+          "de": "Insekt",
+          "ru": "насекомое",
+          "source_en": "insect",
+          "source_de": "Insekt, Krabbeltier",
+          "article": "das"
+        },
+        {
+          "id": "nature-bee",
+          "de": "Biene",
+          "ru": "пчела",
+          "source_en": "bee",
+          "source_de": "Biene,Insekt",
+          "article": "die"
+        },
+        {
+          "id": "nature-snake",
+          "de": "Schlange",
+          "ru": "змея",
+          "source_en": "snake",
+          "source_de": "Schlange",
+          "article": "die"
+        },
+        {
+          "id": "nature-mouse",
+          "de": "Maus",
+          "ru": "мышь",
+          "source_en": "mouse",
+          "source_de": "Maus",
+          "article": "die"
+        },
+        {
+          "id": "nature-pet",
+          "de": "Haustier",
+          "ru": "домашний питомец",
+          "source_en": "pet",
+          "source_de": "Haustier",
+          "article": "das"
+        },
+        {
+          "id": "nature-stone",
+          "de": "Stein",
+          "ru": "камень",
+          "source_en": "stone",
+          "source_de": "Stein",
+          "article": "der"
+        },
+        {
+          "id": "nature-earth",
+          "de": "Erde",
+          "ru": "земля",
+          "source_en": "earth",
+          "source_de": "Erde",
+          "article": "die"
+        }
+      ]
+    }
+  ]
+}

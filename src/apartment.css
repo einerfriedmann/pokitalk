@@ -1,0 +1,40 @@
+/* Furniture lives around the pet instead of turning the room into a card grid. */
+.apartment{position:absolute;inset:0;isolation:isolate;pointer-events:none;--room-floor:#a28aab;--room-line:#ceb8dc;--room-rug:#9b7d9f}
+.apartment--bathroom{--room-floor:#8fa4b0;--room-line:#b7d2d9;--room-rug:#a6bfcb}
+.apartment--kitchen{--room-floor:#b59b8f;--room-line:#e1c4b1;--room-rug:#bea4b4}
+.apartment--playroom{--room-floor:#a08db8;--room-line:#c9bbdf;--room-rug:#ac8ca8}
+.apartment__scenery{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:-2}
+.apartment__floor-fill{fill:var(--room-floor);opacity:.22}
+.apartment__floor-lines{fill:none;stroke:var(--room-line);stroke-width:1;opacity:.12}
+.apartment__rug{fill:var(--room-rug);opacity:.25;stroke:var(--room-line);stroke-width:3}
+.apartment__wall-line{fill:none;stroke:var(--room-line);stroke-width:2;opacity:.21}
+.apartment__hanging-star{fill:#e4c69c;opacity:.4}
+.apartment__moon-decor{fill:#dbbfdb;opacity:.24}
+.apartment__tile-line{fill:none;stroke:var(--room-line);stroke-width:1;opacity:.12}
+.apartment__counter,.apartment__shelf{fill:#bc9db7;opacity:.35}
+.apartment__sink-decor{fill:none;stroke:#c4dce1;stroke-width:4;stroke-linecap:round;opacity:.4}
+.apartment__bunting{fill:none;stroke:#cdb1cf;stroke-width:2;opacity:.27}
+.apartment__play-floor{stroke:#d9b5cd;stroke-width:5;stroke-dasharray:20 13;opacity:.12}
+.apartment__objects{position:absolute;inset:0;z-index:1;pointer-events:none}
+.apartment__hotspot{position:absolute;left:var(--object-x);top:var(--object-y);width:var(--object-w);height:var(--object-h);min-width:44px;min-height:44px;padding:0;background:none;border-radius:13px;pointer-events:auto;filter:drop-shadow(0 5px 5px #19112d25);transition:filter .15s,transform .15s;isolation:isolate;display:grid;place-items:center}
+.apartment__drawing{display:block;position:relative;width:100%;aspect-ratio:1}
+.apartment__drawing>svg{width:100%;height:100%;display:block;overflow:visible}
+.apartment__hotspot:hover,.apartment__hotspot:focus-visible{filter:drop-shadow(0 0 8px #f5d4a677)}
+.apartment__hotspot:active:not(:disabled){transform:scale(.94)}
+.apartment__hotspot.is-locked .apartment__drawing>svg{filter:saturate(.45);opacity:.72}
+.apartment__marker{position:absolute;right:2px;top:3px;height:17px;width:17px;border-radius:50%;display:grid;place-items:center;background:#fcf0db;box-shadow:0 2px 8px #1d16243b;color:#6c557d;opacity:.88;z-index:1}
+.apartment__marker svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.apartment__hotspot.is-locked .apartment__marker{background:#c9b4d2;color:#5d4b6e}
+.apartment .cat-touch{bottom:6%;left:50%;width:min(65%,260px);height:min(61%,310px);min-height:0;z-index:2;pointer-events:none;filter:drop-shadow(0 9px 14px #1c122e22)}
+.apartment .cat-touch>svg{pointer-events:none}
+.apartment .cat-touch .cat-body,.apartment .cat-touch .tail{pointer-events:visiblePainted;cursor:pointer}
+.apartment .cat-touch:active:not(:disabled){transform:translateX(-50%) scale(.98)}
+.apartment__room-name{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#dac8e3;opacity:.55;white-space:nowrap;z-index:3;pointer-events:none}
+.apartment__arcade{position:absolute;right:-1%;top:33%;width:29%;height:51%;min-width:58px;min-height:104px;padding:0;background:none;pointer-events:auto;filter:drop-shadow(0 6px 8px #17102744);border-radius:12px;z-index:3}
+.apartment__arcade>svg{width:100%;height:100%;display:block;overflow:visible}
+.apartment__arcade:hover,.apartment__arcade:focus-visible{filter:drop-shadow(0 0 12px #f1ce9e88)}
+.apartment__arcade-label{position:absolute;left:-8%;bottom:-6px;width:116%;text-align:center;font-size:8px;line-height:1.4;letter-spacing:.2px;color:#f4ddbd;text-shadow:0 1px 5px #1b1433}
+.apartment__arcade-spark{position:absolute;right:3%;top:2%;font-size:15px;color:#f0d59f;animation:arcade-glow 2.8s ease-in-out infinite}
+@keyframes arcade-glow{50%{opacity:.4;transform:scale(.75)}}
+@media(max-height:700px){.apartment .cat-touch{height:59%;width:61%;bottom:5%}.apartment__marker{height:15px;width:15px;top:5px;right:0}.apartment__marker svg{width:10px;height:10px}.apartment__arcade-label{font-size:7px;bottom:-7px}.apartment__room-name{font-size:7px;bottom:-1px;letter-spacing:1.5px}}
+@media(prefers-reduced-motion:reduce){.apartment__hotspot{transition:none}.apartment__arcade-spark{animation:none}}

@@ -1,0 +1,835 @@
+{
+  "items": [
+    {
+      "id": "care-water",
+      "item": "water",
+      "word": "Wasser",
+      "need": "drink",
+      "requestDe": "Ich bin durstig. Ich brauche Wasser.",
+      "requestRu": "Я хочу пить. Мне нужна вода.",
+      "replyDe": "Hier ist Wasser.",
+      "replyRu": "Вот вода.",
+      "acceptDe": "Danke! Jetzt bin ich nicht mehr durstig.",
+      "acceptRu": "Спасибо! Теперь я больше не хочу пить.",
+      "declineDe": "Danke, aber ich brauche Wasser.",
+      "declineRu": "Спасибо, но мне нужна вода."
+    },
+    {
+      "id": "care-milk",
+      "item": "milk",
+      "word": "Milch",
+      "need": "drink",
+      "requestDe": "Ich möchte Milch trinken.",
+      "requestRu": "Я хочу выпить молока.",
+      "replyDe": "Hier ist die Milch.",
+      "replyRu": "Вот молоко.",
+      "acceptDe": "Danke! Die Milch ist gut.",
+      "acceptRu": "Спасибо! Молоко вкусное.",
+      "declineDe": "Danke, aber ich möchte Milch trinken.",
+      "declineRu": "Спасибо, но я хочу выпить молока."
+    },
+    {
+      "id": "care-fish",
+      "item": "fish",
+      "word": "Fisch",
+      "need": "food",
+      "requestDe": "Ich bin hungrig. Ich möchte Fisch essen.",
+      "requestRu": "Я голоден. Я хочу поесть рыбы.",
+      "replyDe": "Hier ist der Fisch.",
+      "replyRu": "Вот рыба.",
+      "acceptDe": "Danke! Jetzt bin ich nicht mehr hungrig.",
+      "acceptRu": "Спасибо! Теперь я больше не голоден.",
+      "declineDe": "Danke, aber ich möchte Fisch essen.",
+      "declineRu": "Спасибо, но я хочу поесть рыбы."
+    },
+    {
+      "id": "care-bread",
+      "item": "bread",
+      "word": "Brot",
+      "need": "food",
+      "requestDe": "Ich bin hungrig. Ich brauche Brot.",
+      "requestRu": "Я голоден. Мне нужен хлеб.",
+      "replyDe": "Hier ist das Brot.",
+      "replyRu": "Вот хлеб.",
+      "acceptDe": "Danke! Das Brot ist gut.",
+      "acceptRu": "Спасибо! Хлеб вкусный.",
+      "declineDe": "Danke, aber ich brauche Brot.",
+      "declineRu": "Спасибо, но мне нужен хлеб."
+    },
+    {
+      "id": "care-apple",
+      "item": "apple",
+      "word": "Apfel",
+      "need": "food",
+      "requestDe": "Ich möchte einen Apfel essen.",
+      "requestRu": "Я хочу съесть яблоко.",
+      "replyDe": "Hier ist ein Apfel.",
+      "replyRu": "Вот яблоко.",
+      "acceptDe": "Danke! Der Apfel ist gut.",
+      "acceptRu": "Спасибо! Яблоко вкусное.",
+      "declineDe": "Danke, aber ich möchte einen Apfel essen.",
+      "declineRu": "Спасибо, но я хочу съесть яблоко."
+    },
+    {
+      "id": "care-bed",
+      "item": "bed",
+      "word": "Bett",
+      "need": "rest",
+      "requestDe": "Ich bin müde. Ich brauche ein Bett.",
+      "requestRu": "Я устал. Мне нужна кровать.",
+      "replyDe": "Hier ist dein Bett.",
+      "replyRu": "Вот твоя кровать.",
+      "acceptDe": "Danke! Hier kann ich schlafen.",
+      "acceptRu": "Спасибо! Здесь я могу поспать.",
+      "declineDe": "Danke, aber ich bin müde. Ich brauche ein Bett.",
+      "declineRu": "Спасибо, но я устал. Мне нужна кровать."
+    },
+    {
+      "id": "care-ball",
+      "item": "ball",
+      "word": "Ball",
+      "need": "play",
+      "requestDe": "Ich bin gelangweilt. Ich möchte mit dem Ball spielen.",
+      "requestRu": "Мне скучно. Я хочу поиграть с мячом.",
+      "replyDe": "Hier ist der Ball.",
+      "replyRu": "Вот мяч.",
+      "acceptDe": "Danke! Wir spielen zusammen.",
+      "acceptRu": "Спасибо! Мы играем вместе.",
+      "declineDe": "Danke, aber ich möchte mit dem Ball spielen.",
+      "declineRu": "Спасибо, но я хочу поиграть с мячом."
+    },
+    {
+      "id": "care-book",
+      "item": "book",
+      "word": "Buch",
+      "need": "play",
+      "requestDe": "Ich möchte lesen. Ich brauche ein Buch.",
+      "requestRu": "Я хочу почитать. Мне нужна книга.",
+      "replyDe": "Hier ist das Buch.",
+      "replyRu": "Вот книга.",
+      "acceptDe": "Danke! Jetzt kann ich lesen.",
+      "acceptRu": "Спасибо! Теперь я могу почитать.",
+      "declineDe": "Danke, aber ich möchte ein Buch lesen.",
+      "declineRu": "Спасибо, но я хочу почитать книгу."
+    },
+    {
+      "id": "care-cup",
+      "item": "cup",
+      "word": "Tasse",
+      "need": "drink",
+      "requestDe": "Ich möchte aus einer Tasse trinken.",
+      "requestRu": "Я хочу пить из чашки.",
+      "replyDe": "Hier ist deine Tasse.",
+      "replyRu": "Вот твоя чашка.",
+      "acceptDe": "Danke! Jetzt kann ich aus der Tasse trinken.",
+      "acceptRu": "Спасибо! Теперь я могу пить из чашки.",
+      "declineDe": "Danke, aber ich brauche eine Tasse.",
+      "declineRu": "Спасибо, но мне нужна чашка."
+    },
+    {
+      "id": "care-toy",
+      "item": "toy",
+      "word": "Spielzeug",
+      "need": "play",
+      "requestDe": "Ich bin gelangweilt. Ich möchte mein Spielzeug.",
+      "requestRu": "Мне скучно. Я хочу свою игрушку.",
+      "replyDe": "Hier ist dein Spielzeug.",
+      "replyRu": "Вот твоя игрушка.",
+      "acceptDe": "Danke! Jetzt können wir zusammen spielen.",
+      "acceptRu": "Спасибо! Теперь мы можем поиграть вместе.",
+      "declineDe": "Danke, aber ich möchte mein Spielzeug.",
+      "declineRu": "Спасибо, но я хочу свою игрушку."
+    },
+    {
+      "id": "care-soap",
+      "item": "soap",
+      "word": "Seife",
+      "need": "wash",
+      "requestDe": "Ich bin schmutzig. Ich brauche Seife.",
+      "requestRu": "Я грязный. Мне нужно мыло.",
+      "replyDe": "Hier ist die Seife.",
+      "replyRu": "Вот мыло.",
+      "acceptDe": "Danke! Jetzt bin ich sauber.",
+      "acceptRu": "Спасибо! Теперь я чистый.",
+      "declineDe": "Danke, aber ich brauche Seife.",
+      "declineRu": "Спасибо, но мне нужно мыло."
+    },
+    {
+      "id": "care-towel",
+      "item": "towel",
+      "word": "Handtuch",
+      "need": "wash",
+      "requestDe": "Ich möchte mich waschen. Ich brauche ein Handtuch.",
+      "requestRu": "Я хочу умыться. Мне нужно полотенце.",
+      "replyDe": "Hier ist dein Handtuch.",
+      "replyRu": "Вот твоё полотенце.",
+      "acceptDe": "Danke! Das Handtuch ist weich.",
+      "acceptRu": "Спасибо! Полотенце мягкое.",
+      "declineDe": "Danke, aber ich brauche ein Handtuch.",
+      "declineRu": "Спасибо, но мне нужно полотенце."
+    }
+  ],
+  "moods": {
+    "happy": {
+      "de": "Ich bin glücklich. Ich mag dich.",
+      "ru": "Я счастлив. Ты мне нравишься."
+    },
+    "hungry": {
+      "de": "Ich bin hungrig. Ich möchte essen.",
+      "ru": "Я голоден. Я хочу поесть."
+    },
+    "thirsty": {
+      "de": "Ich bin durstig. Ich möchte trinken.",
+      "ru": "Я хочу пить. Я хочу попить."
+    },
+    "sleepy": {
+      "de": "Ich bin müde. Ich möchte schlafen.",
+      "ru": "Я устал. Я хочу поспать."
+    },
+    "bored": {
+      "de": "Ich bin gelangweilt. Ich möchte spielen.",
+      "ru": "Мне скучно. Я хочу поиграть."
+    },
+    "sad": {
+      "de": "Ich bin traurig. Bleib bitte hier.",
+      "ru": "Мне грустно. Пожалуйста, останься здесь."
+    },
+    "angry": {
+      "de": "Ich bin verärgert. Ich möchte allein sein.",
+      "ru": "Я расстроен. Я хочу побыть один."
+    },
+    "dirty": {
+      "de": "Ich bin schmutzig. Ich möchte mich waschen.",
+      "ru": "Я грязный. Я хочу умыться."
+    },
+    "petPositive": {
+      "de": "Das ist schön. Ich mag dich.",
+      "ru": "Как приятно. Ты мне нравишься."
+    },
+    "petNegative": {
+      "de": "Ich bin müde. Ich möchte jetzt schlafen.",
+      "ru": "Я устал. Сейчас я хочу спать."
+    },
+    "ignored": {
+      "de": "Ich bin traurig. Ich brauche dich.",
+      "ru": "Мне грустно. Ты мне нужен."
+    },
+    "partial": {
+      "de": "Danke! Das ist auch gut.",
+      "ru": "Спасибо! Это тоже хорошо."
+    }
+  },
+  "inspection": {
+    "water": {
+      "de": "Ich möchte Wasser trinken.",
+      "ru": "Я хочу попить воды."
+    },
+    "milk": {
+      "de": "Ich möchte Milch trinken.",
+      "ru": "Я хочу выпить молока."
+    },
+    "fish": {
+      "de": "Der Fisch ist klein.",
+      "ru": "Рыбка маленькая."
+    },
+    "bread": {
+      "de": "Ich möchte Brot essen.",
+      "ru": "Я хочу поесть хлеба."
+    },
+    "apple": {
+      "de": "Der Apfel ist gut.",
+      "ru": "Яблоко вкусное."
+    },
+    "bed": {
+      "de": "Hier kann ich schlafen.",
+      "ru": "Здесь я могу поспать."
+    },
+    "ball": {
+      "de": "Wir spielen mit dem Ball.",
+      "ru": "Мы играем с мячом."
+    },
+    "book": {
+      "de": "Ich möchte das Buch lesen.",
+      "ru": "Я хочу почитать книгу."
+    },
+    "cup": {
+      "de": "Ich trinke aus der Tasse.",
+      "ru": "Я пью из чашки."
+    },
+    "toy": {
+      "de": "Das ist mein Spielzeug.",
+      "ru": "Это моя игрушка."
+    },
+    "soap": {
+      "de": "Ich wasche mich mit Seife.",
+      "ru": "Я моюсь с мылом."
+    },
+    "towel": {
+      "de": "Das Handtuch ist weich.",
+      "ru": "Полотенце мягкое."
+    },
+    "table": {
+      "de": "Hier essen wir.",
+      "ru": "Здесь мы едим."
+    },
+    "lamp": {
+      "de": "Die Lampe ist an.",
+      "ru": "Лампа включена."
+    },
+    "fridge": {
+      "de": "Der Kühlschrank ist kalt.",
+      "ru": "Холодильник холодный."
+    },
+    "stove": {
+      "de": "Der Herd ist heiß.",
+      "ru": "Плита горячая."
+    },
+    "oven": {
+      "de": "Der Ofen ist heiß.",
+      "ru": "Духовка горячая."
+    }
+  },
+  "lexemes": [
+    {
+      "lemma": "ich",
+      "forms": [
+        "ich",
+        "Ich",
+        "mich",
+        "mir"
+      ],
+      "source_en": "I",
+      "source_de": "ich, persönliches Pronomen"
+    },
+    {
+      "lemma": "du",
+      "forms": [
+        "du",
+        "dich",
+        "dir"
+      ],
+      "source_en": "you",
+      "source_de": "du"
+    },
+    {
+      "lemma": "wir",
+      "forms": [
+        "wir",
+        "Wir"
+      ],
+      "source_en": "we",
+      "source_de": "wir"
+    },
+    {
+      "lemma": "sein",
+      "forms": [
+        "sein",
+        "bin",
+        "ist",
+        "sind"
+      ],
+      "source_en": "be",
+      "source_de": "sein,existieren"
+    },
+    {
+      "lemma": "haben",
+      "forms": [
+        "haben",
+        "habe"
+      ],
+      "source_en": "have",
+      "source_de": "haben"
+    },
+    {
+      "lemma": "mögen",
+      "forms": [
+        "mögen",
+        "mag",
+        "möchte"
+      ],
+      "source_en": "like",
+      "source_de": "mögen"
+    },
+    {
+      "lemma": "brauchen",
+      "forms": [
+        "brauchen",
+        "brauche"
+      ],
+      "source_en": "need",
+      "source_de": "brauchen"
+    },
+    {
+      "lemma": "können",
+      "forms": [
+        "können",
+        "kann"
+      ],
+      "source_en": "can",
+      "source_de": "können,in der Lage sein"
+    },
+    {
+      "lemma": "hier",
+      "forms": [
+        "hier",
+        "Hier"
+      ],
+      "source_en": "here",
+      "source_de": "hier"
+    },
+    {
+      "lemma": "das",
+      "forms": [
+        "das",
+        "Das"
+      ],
+      "source_en": "that",
+      "source_de": "das"
+    },
+    {
+      "lemma": "der",
+      "forms": [
+        "der",
+        "Der",
+        "die",
+        "Die",
+        "das",
+        "dem"
+      ],
+      "source_en": "the",
+      "source_de": "der"
+    },
+    {
+      "lemma": "ein",
+      "forms": [
+        "ein",
+        "eine",
+        "einen",
+        "einer"
+      ],
+      "source_en": "a",
+      "source_de": "ein, eine"
+    },
+    {
+      "lemma": "dein",
+      "forms": [
+        "dein",
+        "deine"
+      ],
+      "source_en": "your",
+      "source_de": "dein"
+    },
+    {
+      "lemma": "mein",
+      "forms": [
+        "mein"
+      ],
+      "source_en": "my",
+      "source_de": "mein"
+    },
+    {
+      "lemma": "Danke",
+      "forms": [
+        "Danke"
+      ],
+      "source_en": "thanks",
+      "source_de": "Danke"
+    },
+    {
+      "lemma": "bitte",
+      "forms": [
+        "bitte"
+      ],
+      "source_en": "please",
+      "source_de": "bitte"
+    },
+    {
+      "lemma": "jetzt",
+      "forms": [
+        "jetzt",
+        "Jetzt"
+      ],
+      "source_en": "now",
+      "source_de": "jetzt"
+    },
+    {
+      "lemma": "nicht",
+      "forms": [
+        "nicht"
+      ],
+      "source_en": "not",
+      "source_de": "nicht"
+    },
+    {
+      "lemma": "mehr",
+      "forms": [
+        "mehr"
+      ],
+      "source_en": "more",
+      "source_de": "mehr"
+    },
+    {
+      "lemma": "gut",
+      "forms": [
+        "gut"
+      ],
+      "source_en": "good",
+      "source_de": "gut"
+    },
+    {
+      "lemma": "hungrig",
+      "forms": [
+        "hungrig"
+      ],
+      "source_en": "hungry",
+      "source_de": "hungrig"
+    },
+    {
+      "lemma": "durstig",
+      "forms": [
+        "durstig"
+      ],
+      "source_en": "thirsty",
+      "source_de": "durstig"
+    },
+    {
+      "lemma": "müde",
+      "forms": [
+        "müde"
+      ],
+      "source_en": "tired",
+      "source_de": "müde"
+    },
+    {
+      "lemma": "gelangweilt",
+      "forms": [
+        "gelangweilt"
+      ],
+      "source_en": "bored",
+      "source_de": "gelangweilt,interesselos"
+    },
+    {
+      "lemma": "glücklich",
+      "forms": [
+        "glücklich"
+      ],
+      "source_en": "happy",
+      "source_de": "glücklich"
+    },
+    {
+      "lemma": "traurig",
+      "forms": [
+        "traurig"
+      ],
+      "source_en": "sad",
+      "source_de": "traurig"
+    },
+    {
+      "lemma": "verärgert",
+      "forms": [
+        "verärgert"
+      ],
+      "source_en": "angry",
+      "source_de": "wütend,verärgert"
+    },
+    {
+      "lemma": "allein",
+      "forms": [
+        "allein"
+      ],
+      "source_en": "alone",
+      "source_de": "allein,einsam"
+    },
+    {
+      "lemma": "schmutzig",
+      "forms": [
+        "schmutzig"
+      ],
+      "source_en": "dirty",
+      "source_de": "schmutzig"
+    },
+    {
+      "lemma": "sauber",
+      "forms": [
+        "sauber"
+      ],
+      "source_en": "clean",
+      "source_de": "sauber, rein"
+    },
+    {
+      "lemma": "schön",
+      "forms": [
+        "schön"
+      ],
+      "source_en": "beautiful",
+      "source_de": "schön,wunderschön"
+    },
+    {
+      "lemma": "klein",
+      "forms": [
+        "klein"
+      ],
+      "source_en": "small",
+      "source_de": "klein"
+    },
+    {
+      "lemma": "weich",
+      "forms": [
+        "weich"
+      ],
+      "source_en": "soft",
+      "source_de": "weich"
+    },
+    {
+      "lemma": "kalt",
+      "forms": [
+        "kalt"
+      ],
+      "source_en": "cold",
+      "source_de": "kalt, kühl"
+    },
+    {
+      "lemma": "heiß",
+      "forms": [
+        "heiß"
+      ],
+      "source_en": "hot",
+      "source_de": "heiß"
+    },
+    {
+      "lemma": "an",
+      "forms": [
+        "an"
+      ],
+      "source_en": "on",
+      "source_de": "an"
+    },
+    {
+      "lemma": "waschen",
+      "forms": [
+        "waschen",
+        "wasche"
+      ],
+      "source_en": "wash",
+      "source_de": "waschen"
+    },
+    {
+      "lemma": "schlafen",
+      "forms": [
+        "schlafen"
+      ],
+      "source_en": "sleep",
+      "source_de": "schlafen"
+    },
+    {
+      "lemma": "lesen",
+      "forms": [
+        "lesen"
+      ],
+      "source_en": "read",
+      "source_de": "lesen"
+    },
+    {
+      "lemma": "spielen",
+      "forms": [
+        "spielen"
+      ],
+      "source_en": "play",
+      "source_de": "spielen"
+    },
+    {
+      "lemma": "essen",
+      "forms": [
+        "essen"
+      ],
+      "source_en": "eat",
+      "source_de": "essen"
+    },
+    {
+      "lemma": "trinken",
+      "forms": [
+        "trinken",
+        "trinke"
+      ],
+      "source_en": "drink",
+      "source_de": "trinken"
+    },
+    {
+      "lemma": "mit",
+      "forms": [
+        "mit"
+      ],
+      "source_en": "with",
+      "source_de": "mit"
+    },
+    {
+      "lemma": "aus",
+      "forms": [
+        "aus"
+      ],
+      "source_en": "out",
+      "source_de": "aus"
+    },
+    {
+      "lemma": "aber",
+      "forms": [
+        "aber"
+      ],
+      "source_en": "but",
+      "source_de": "aber,jedoch"
+    },
+    {
+      "lemma": "zusammen",
+      "forms": [
+        "zusammen"
+      ],
+      "source_en": "together",
+      "source_de": "zusammen"
+    },
+    {
+      "lemma": "bleiben",
+      "forms": [
+        "bleiben",
+        "Bleib"
+      ],
+      "source_en": "stay",
+      "source_de": "bleiben"
+    },
+    {
+      "lemma": "auch",
+      "forms": [
+        "auch"
+      ],
+      "source_en": "also",
+      "source_de": "auch,ebenfalls"
+    },
+    {
+      "lemma": "Wasser",
+      "forms": [
+        "Wasser"
+      ],
+      "source_en": "water",
+      "source_de": "Wasser"
+    },
+    {
+      "lemma": "Milch",
+      "forms": [
+        "Milch"
+      ],
+      "source_en": "milk",
+      "source_de": "Milch"
+    },
+    {
+      "lemma": "Fisch",
+      "forms": [
+        "Fisch"
+      ],
+      "source_en": "fish",
+      "source_de": "Fisch"
+    },
+    {
+      "lemma": "Brot",
+      "forms": [
+        "Brot"
+      ],
+      "source_en": "bread",
+      "source_de": "Brot,Backware"
+    },
+    {
+      "lemma": "Apfel",
+      "forms": [
+        "Apfel"
+      ],
+      "source_en": "apple",
+      "source_de": "Apfel,Frucht"
+    },
+    {
+      "lemma": "Bett",
+      "forms": [
+        "Bett"
+      ],
+      "source_en": "bed",
+      "source_de": "Bett,Liege"
+    },
+    {
+      "lemma": "Ball",
+      "forms": [
+        "Ball"
+      ],
+      "source_en": "ball",
+      "source_de": "Ball,Kugel"
+    },
+    {
+      "lemma": "Buch",
+      "forms": [
+        "Buch"
+      ],
+      "source_en": "book",
+      "source_de": "Buch,Werk"
+    },
+    {
+      "lemma": "Tasse",
+      "forms": [
+        "Tasse"
+      ],
+      "source_en": "cup",
+      "source_de": "Tasse,Becher"
+    },
+    {
+      "lemma": "Spielzeug",
+      "forms": [
+        "Spielzeug"
+      ],
+      "source_en": "toy",
+      "source_de": "Spielzeug"
+    },
+    {
+      "lemma": "Seife",
+      "forms": [
+        "Seife"
+      ],
+      "source_en": "soap",
+      "source_de": "Seife"
+    },
+    {
+      "lemma": "Handtuch",
+      "forms": [
+        "Handtuch"
+      ],
+      "source_en": "towel",
+      "source_de": "Handtuch"
+    },
+    {
+      "lemma": "Lampe",
+      "forms": [
+        "Lampe"
+      ],
+      "source_en": "lamp",
+      "source_de": "Lampe"
+    },
+    {
+      "lemma": "Kühlschrank",
+      "forms": [
+        "Kühlschrank"
+      ],
+      "source_en": "fridge",
+      "source_de": "Kühlschrank"
+    },
+    {
+      "lemma": "Herd",
+      "forms": [
+        "Herd"
+      ],
+      "source_en": "stove",
+      "source_de": "Ofen, Herd"
+    },
+    {
+      "lemma": "Ofen",
+      "forms": [
+        "Ofen"
+      ],
+      "source_en": "oven",
+      "source_de": "Ofen"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {unlockedTopics,unlockedWords,restoreLearning,rememberWord,finishLearningGame} from '../src/progression.js';
+const topics=[{id:'care',trust:0,words:[{id:'water',de:'Wasser'}]},{id:'home',trust:50,words:[{id:'table',de:'Tisch'}]}];
+test('themes unlock by trust and remain open after a setback',()=>{assert.deepEqual(unlockedTopics(topics,49),['care']);assert.deepEqual(unlockedTopics(topics,50),['care','home']);assert.deepEqual(unlockedTopics(topics,1,['home','unknown']),['care','home']);assert.deepEqual(unlockedWords(topics,['care']).map(w=>w.id),['water']);});
+test('migration preserves prior learning and filters corrupt vocabulary',()=>{const s=restoreLearning({bond:48,learned:['Wasser']},{vocabProgress:{table:{seen:-4,understood:999,used:'bad'},unknown:{seen:1}}},topics);assert.equal(s.vocabProgress.water.used,1);assert.equal(s.vocabProgress.table.understood,99);assert.equal(s.vocabProgress.table.used,0);assert.ok(!s.vocabProgress.unknown);});
+test('seeing a word is distinct from understanding and using it',()=>{const s=restoreLearning({bond:48,learned:[]},null,topics);const next=rememberWord(s,'water');assert.equal(next.vocabProgress.water.seen,1);assert.equal(next.vocabProgress.water.used,0);assert.ok(!s.vocabProgress.water);});
+test('arcade rewards once and never damages pet needs',()=>{const s=restoreLearning({bond:48,needs:{food:42},learned:[]},null,topics);const next=finishLearningGame(s,'round1',['water','water'],7);assert.equal(next.bond,50);assert.deepEqual(next.needs,s.needs);assert.equal(next.vocabProgress.water.understood,1);assert.equal(finishLearningGame(next,'round1',['water'],7),next);});

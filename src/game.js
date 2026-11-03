@@ -1,8 +1,8 @@
-export const categories = { food: 'Сытость', drink: 'Вода', rest: 'Сон', play: 'Настроение' };
+export const categories = { food: 'Сытость', drink: 'Вода', rest: 'Сон', play: 'Настроение', wash: 'Чистота' };
 export const SAVE_KEY = 'mooncat-v2';
 const clamp = n => Math.max(0, Math.min(100, Math.round(n)));
 export function newGame(now = Date.now()) {
-  return { version: 2, language: 'de', introduced: false, needs: {food:42,drink:64,rest:76,play:57}, bond:48, learned:[], turn:0, format:'mixed', lastSeen:now, lastPet:0, request:null, lastStory:'' };
+  return { version: 2, language: 'de', introduced: false, needs: {food:42,drink:64,rest:76,play:57,wash:66}, bond:48, learned:[], turn:0, format:'mixed', lastSeen:now, lastPet:0, request:null, lastStory:'' };
 }
 export function restoreGame(saved, legacy, deck, now = Date.now()) {
   const state = newGame(now);
@@ -43,6 +43,7 @@ export function moodFor(state, reaction = '') {
   if (state.needs.rest<38) return 'sleepy';
   if (state.needs.food<50) return 'hungry';
   if (state.needs.drink<45) return 'thirsty';
+  if (state.needs.wash<40) return 'dirty';
   if (state.needs.play<45) return 'bored';
   return 'happy';
 }
